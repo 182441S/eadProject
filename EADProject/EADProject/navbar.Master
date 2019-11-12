@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="navbar.master.cs" Inherits="EADProject.navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+        <nav class="navbar nav-tabs navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Tours@SGLite</a>
+                </div>
+                <!-- if customer -->
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="glyphicon glyphicon-home">&nbsp</span>Home</a></li>
+                        <li class="active"><a href="Home.aspx">Booking</a></li>
+                        <li class="active"><a href="Home.aspx">History</a></li>
+                        <li class="active"><a href="Home.aspx">Account</a></li>
+                    </ul>
+                </div>
+                <!-- if tourguide
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="glyphicon glyphicon-home">&nbsp</span>Home</a></li>
+                        <li class="active"><a href="Home.aspx">Jobs</a></li>
+                        <li class="active"><a href="Home.aspx">History</a></li>
+                        <li class="active"><a href="Home.aspx">Account</a></li>
+                    </ul>
+                </div> -->
+                <!-- if staff
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="glyphicon glyphicon-home">&nbsp</span>Home</a></li>
+                        <li class="active"><a href="Home.aspx">Edit</a></li>
+                        <li class="active"><a href="Home.aspx">Statistics</a></li>
+                    </ul>
+                </div> -->
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</body>
+</html>
