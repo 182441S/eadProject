@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="T_Details.aspx.cs" Inherits="EADProject.T_Details" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -12,14 +13,12 @@
 
                             <div class="form-group row">
                                 <div class="col-md-1 col-sm-1 col-lg-1">
-
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>First Name: </label>
                                     <input type="text" id="fName" class="form-control" />
                                 </div>
                                 <div class="col-md-2 col-sm-2 col-lg-2">
-
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Passport No.: </label>
@@ -29,14 +28,12 @@
 
                             <div class="form-group row">
                                 <div class="col-md-1 col-sm-1 col-lg-1">
-
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Last Name: </label>
                                     <input type="text" id="lName" class="form-control" />
                                 </div>
                                 <div class="col-md-2 col-sm-2 col-lg-2">
-
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Duration Start: </label>
@@ -46,14 +43,12 @@
 
                             <div class="form-group row">
                                 <div class="col-md-1 col-sm-1 col-lg-1">
-
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Email: </label>
                                     <input type="text" id="email" class="form-control" />
                                 </div>
                                 <div class="col-md-2 col-sm-2 col-lg-2">
-
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Duration End: </label>
@@ -63,14 +58,12 @@
 
                             <div class="form-group row">
                                 <div class="col-md-1 col-sm-1 col-lg-1">
-
                                 </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Mobile: </label>
                                     <input type="text" id="mobileNo" class="form-control" />
                                 </div>
                                 <div class="col-md-3 col-sm-2 col-lg-2">
-
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Travelling From: </label>
@@ -80,20 +73,17 @@
 
                             <div class="form-group row">
                                 <div class="col-md-1 col-sm-1 col-lg-1">
-
                                 </div>
-                                <div class="col-md-2 col-sm-2 col-lg-2">
+                                <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Home Phone: </label>
                                     <input type="text" id="homeNo" class="form-control" />
                                 </div>
                                 <div class="col-md-2 col-sm-2 col-lg-2">
-
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                               <div class="col-md-1 col-sm-1 col-lg-1">
-
+                                <div class="col-md-1 col-sm-1 col-lg-1">
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <button type="submit" id="btnSubmit" onclick="location.href='P_Details.aspx';" class="btn btn-primary btn-md">Submit</button>
@@ -107,51 +97,14 @@
     </div>
 
     <script>
-        var mobileNo = document.querySelector("#mobileNo");
-        mobileNo.addEventListener("input", onChangePhoneNumber);
+        document.getElementById('mobileNo').addEventListener('input', function (e) {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,4})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(+' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
 
-        function onChangePhoneNumber(e) {
-            var phoneNumber = mobileNo.value;
-
-            // Do not allow users to write invalid characters
-            var formattedPhoneNumber = phoneNumber.replace(/[^\d]/g, "");
-            formattedPhoneNumber = formattedPhoneNumber.substring(0, 8);
-
-            // Split the card number is groups of 4
-            var phoneNumberSections = formattedPhoneNumber.match(/\d{1,4}/g);
-            if (phoneNumberSections !== null) {
-                formattedPhoneNumber = phoneNumberSections.join(' ');
-            }
-
-            console.log("'" + phoneNumber + "' to '" + formattedPhoneNumber + "'");
-
-            // If the formmattedphoneNumber is different to what is shown, change the value
-            if (phoneNumber !== formattedPhoneNumber) {
-                mobileNo.value = formattedPhoneNumber;
-            }
-        }
-        var homeNo = document.querySelector("#homeNo");
-        homeNo.addEventListener("input", onChangeHomeNumber);
-
-        function onChangeHomeNumber(e) {
-            var homeNumber = homeNo.value;
-
-            // Do not allow users to write invalid characters
-            var formattedhomeNumber = homeNumber.replace(/[^\d]/g, "");
-            formattedhomeNumber = formattedhomeNumber.substring(0, 8);
-
-            // Split the card number is groups of 4
-            var homeNumberSections = formattedhomeNumber.match(/\d{1,4}/g);
-            if (homeNumberSections !== null) {
-                formattedhomeNumber = homeNumberSections.join(' ');
-            }
-
-            console.log("'" + homeNumber + "' to '" + formattedhomeNumber + "'");
-
-            // If the formmattedhomeNumber is different to what is shown, change the value
-            if (homeNumber !== formattedhomeNumber) {
-                homeNo.value = formattedhomeNumber;
-            }
-        }
+        document.getElementById('homeNo').addEventListener('input', function (e) {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,4})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(+' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
     </script>
 </asp:Content>
