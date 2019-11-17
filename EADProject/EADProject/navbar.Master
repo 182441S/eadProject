@@ -32,12 +32,13 @@
                         <li class="active"><a href="Home.aspx">Booking</a></li>
                         <li class="active"><a href="Home.aspx">History</a></li>
                         <li class="active"><a href="Home.aspx">Account</a></li>
+                        <li class="active"><a href="T_Details.aspx">Travel Details</a></li>
                     </ul>
                 </div>
                 <!-- if tourguide
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="glyphicon glyphicon-home">&nbsp</span>Home</a></li>
+                        <li class="active"><a href="Home.aspx"><span class="glyphicon glyphicon-home">&nbsp</span>Home</a></li>
                         <li class="active"><a href="Home.aspx">Jobs</a></li>
                         <li class="active"><a href="Home.aspx">History</a></li>
                         <li class="active"><a href="Home.aspx">Account</a></li>
@@ -46,7 +47,7 @@
                 <!-- if staff
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="glyphicon glyphicon-home">&nbsp</span>Home</a></li>
+                        <li class="active"><a href="Home.aspx"><span class="glyphicon glyphicon-home">&nbsp</span>Home</a></li>
                         <li class="active"><a href="Home.aspx">Edit</a></li>
                         <li class="active"><a href="Home.aspx">Statistics</a></li>
                     </ul>
