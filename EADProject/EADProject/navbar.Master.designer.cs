@@ -7,9 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EADProject {
-    
-    
+namespace EADProject { 
     public partial class navbar {
         
         /// <summary>

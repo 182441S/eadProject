@@ -33,9 +33,9 @@
                         <li class="active"><a href="Home.aspx">History</a></li>
                         <li class="active"><a href="Home.aspx">Account</a></li>
                         <li class="active"><a href="T_Details.aspx">Travel Details</a></li>
-                        <li class="active"><a href="P_Details.aspx">Payment Details</a></li>
-                        <li class="active"><a href="Cust_Review.aspx">Customer Review</a></li>
-                        <li class="active"><a href="Guide_Review.aspx">Tour Guide Review</a></li>
+                        <li class="active"><a href="JobListing.aspx">Job Listing</a></li>
+                        <li class="active"><a href="Login.aspx">Login</a></li>
+
                     </ul>
                 </div>
                 <!-- if tourguide
