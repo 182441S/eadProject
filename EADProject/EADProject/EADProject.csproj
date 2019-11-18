@@ -84,6 +84,7 @@
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="StaffPlan.aspx" />
     <Content Include="T_Details.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -126,6 +127,13 @@
     </Compile>
     <Compile Include="P_Details.aspx.designer.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffPlan.aspx.cs">
+      <DependentUpon>StaffPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffPlan.aspx.designer.cs">
+      <DependentUpon>StaffPlan.aspx</DependentUpon>
     </Compile>
     <Compile Include="T_Details.aspx.cs">
       <DependentUpon>T_Details.aspx</DependentUpon>
