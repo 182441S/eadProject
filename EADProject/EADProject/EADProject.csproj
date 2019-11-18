@@ -74,6 +74,7 @@
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="JobListing.aspx" />
     <Content Include="P_Details.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -95,6 +96,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobListing.aspx.cs">
+      <DependentUpon>JobListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobListing.aspx.designer.cs">
+      <DependentUpon>JobListing.aspx</DependentUpon>
     </Compile>
     <Compile Include="navbar.Master.cs">
       <DependentUpon>navbar.Master</DependentUpon>
