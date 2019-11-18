@@ -76,6 +76,7 @@
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="JobListing.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="P_Details.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -111,6 +112,13 @@
     </Compile>
     <Compile Include="JobListing.aspx.designer.cs">
       <DependentUpon>JobListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="navbar.Master.cs">
       <DependentUpon>navbar.Master</DependentUpon>

@@ -5,7 +5,7 @@
      <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
-                <div class="well well-sm"
+                <div class="well well-sm">
                     <form class="form-horizontal" method="post">
                         <fieldset>
                             <legend class="text-left navbar-header">Payment Particulars</legend>

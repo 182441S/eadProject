@@ -33,8 +33,6 @@
                         <li class="active"><a href="Home.aspx">History</a></li>
                         <li class="active"><a href="Home.aspx">Account</a></li>
                         <li class="active"><a href="T_Details.aspx">Travel Details</a></li>
-                        <li class="active"><a href="JobListing.aspx">Job listing</a></li>
-
                     </ul>
                 </div>
                 <!-- if tourguide
