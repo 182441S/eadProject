@@ -75,6 +75,15 @@
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\FortCanningPark.jpg" />
+    <Content Include="Images\GardensByTheBay.jpg" />
+    <Content Include="Images\ResortsWorldSentosa.jpg" />
+    <Content Include="Images\SingaporeBotanicGardens.jpg" />
+    <Content Include="Images\SingaporeDuckTours.jpg" />
+    <Content Include="Images\SingaporeFlyer.jpg" />
+    <Content Include="Images\SingaporeRiverHeritage.jpg" />
+    <Content Include="Images\SingaporeZoo.jpg" />
+    <Content Include="Images\UniversalStudios.jpeg" />
     <Content Include="JobListing.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="P_Details.aspx" />
@@ -85,6 +94,7 @@
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="StaffEdit.aspx" />
     <Content Include="StaffPlan.aspx" />
     <Content Include="T_Details.aspx" />
     <Content Include="Web.config" />
@@ -135,6 +145,13 @@
     </Compile>
     <Compile Include="P_Details.aspx.designer.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffEdit.aspx.cs">
+      <DependentUpon>StaffEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffEdit.aspx.designer.cs">
+      <DependentUpon>StaffEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffPlan.aspx.cs">
       <DependentUpon>StaffPlan.aspx</DependentUpon>
