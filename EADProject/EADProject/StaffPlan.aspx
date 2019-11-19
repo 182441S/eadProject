@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script>
+
+    </script>
+    
     <div style="font-family: Courier New, Courier, monospace; font-size: 320%; font-weight: bold; text-align: center">
         CUSTOMISE PLAN
     </div>
