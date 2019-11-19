@@ -14,7 +14,7 @@
 </head>
 <body>
     <div>
-        <nav class="navbar nav-tabs navbar-inverse">
+        <nav class="navbar navbar-expand-md justify-content-center nav-tabs navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
