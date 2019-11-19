@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
                 <div class="well well-sm">
-                    <form class="form-horizontal" method="post">
+                    <form class="form-horizontal" method="post" action="P_Details.aspx">
                         <fieldset>
                             <legend class="text-left navbar-header">Travel Particulars</legend>
 
