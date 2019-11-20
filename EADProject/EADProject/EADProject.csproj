@@ -80,7 +80,10 @@
     <Content Include="Home.aspx" />
     <Content Include="Images\FortCanningPark.jpg" />
     <Content Include="Images\GardensByTheBay.jpg" />
+    <Content Include="Images\Marina Bay Sands.jpg" />
     <Content Include="Images\ResortsWorldSentosa.jpg" />
+    <Content Include="Images\Siloso Beach.jpg" />
+    <Content Include="Images\Singapore River.jpg" />
     <Content Include="Images\SingaporeBotanicGardens.jpg" />
     <Content Include="Images\SingaporeDuckTours.jpg" />
     <Content Include="Images\SingaporeFlyer.jpg" />
