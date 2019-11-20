@@ -1,0 +1,19 @@
+﻿.navbar-nav li:hover > div.dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle:active {
+    pointer-events: none;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+}
+
+.navbar-nav {
+    font-size: 1.2rem;
+}
+
+div.dropdown-menu {
+    margin-top: 0rem;
+}

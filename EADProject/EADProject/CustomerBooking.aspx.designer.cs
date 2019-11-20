@@ -11,7 +11,7 @@ namespace EADProject
 {
 
 
-    public partial class StaffEdit
+    public partial class CustomerBooking
     {
     }
 }

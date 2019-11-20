@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EADProject
 {
-    public partial class StaffEdit : System.Web.UI.Page
+    public partial class navbarV2 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

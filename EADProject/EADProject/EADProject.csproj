@@ -71,6 +71,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CustomerBooking.aspx" />
     <Content Include="CustomerPlan.aspx" />
     <Content Include="Cust_Review.aspx" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
@@ -92,16 +93,26 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="navbar.Master" />
+    <Content Include="navbarV2.Master" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Scripts\npm.js" />
-    <Content Include="StaffEdit.aspx" />
+    <Content Include="StaffGuide.aspx" />
     <Content Include="StaffPlan.aspx" />
+    <Content Include="StaffStats.aspx" />
+    <Content Include="StyleSheets\navbarV2.css" />
     <Content Include="T_Details.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerBooking.aspx.cs">
+      <DependentUpon>CustomerBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerBooking.aspx.designer.cs">
+      <DependentUpon>CustomerBooking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPlan.aspx.cs">
       <DependentUpon>CustomerPlan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,6 +165,13 @@
     <Compile Include="navbar.Master.designer.cs">
       <DependentUpon>navbar.Master</DependentUpon>
     </Compile>
+    <Compile Include="navbarV2.Master.cs">
+      <DependentUpon>navbarV2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navbarV2.Master.designer.cs">
+      <DependentUpon>navbarV2.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="P_Details.aspx.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
@@ -162,12 +180,12 @@
     <Compile Include="P_Details.aspx.designer.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StaffEdit.aspx.cs">
-      <DependentUpon>StaffEdit.aspx</DependentUpon>
+    <Compile Include="StaffGuide.aspx.cs">
+      <DependentUpon>StaffGuide.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StaffEdit.aspx.designer.cs">
-      <DependentUpon>StaffEdit.aspx</DependentUpon>
+    <Compile Include="StaffGuide.aspx.designer.cs">
+      <DependentUpon>StaffGuide.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffPlan.aspx.cs">
       <DependentUpon>StaffPlan.aspx</DependentUpon>
@@ -175,6 +193,13 @@
     </Compile>
     <Compile Include="StaffPlan.aspx.designer.cs">
       <DependentUpon>StaffPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffStats.aspx.cs">
+      <DependentUpon>StaffStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffStats.aspx.designer.cs">
+      <DependentUpon>StaffStats.aspx</DependentUpon>
     </Compile>
     <Compile Include="T_Details.aspx.cs">
       <DependentUpon>T_Details.aspx</DependentUpon>
@@ -201,7 +226,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="StyleSheets\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
