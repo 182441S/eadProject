@@ -12,6 +12,10 @@
             text-shadow: 2px 2px 2px black;
         }
 
+        div#cardHead {
+            background-color: lawngreen;
+        }
+
         .text-center {
             border-top: #28a745;
         }
@@ -27,6 +31,8 @@
                 <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselHome" data-slide-to="1"></li>
                 <li data-target="#carouselHome" data-slide-to="2"></li>
+                <li data-target="#carouselHome" data-slide-to="3"></li>
+                <li data-target="#carouselHome" data-slide-to="4"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="6000" data-pause="hover">
@@ -42,6 +48,12 @@
                 </div>
                 <div class="carousel-item" data-interval="6000" data-pause="hover">
                     <img src="Images/Siloso Beach.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="6000" data-pause="hover">
+                    <img src="Images/SingaporeCBDSkyline.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="6000" data-pause="hover">
+                    <img src="Images/SingaporeJewelChangi.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
@@ -122,13 +134,14 @@
         //}
 
         function greenColor() {
+            var secondValue = Math.round(Math.random() * 25) + 230
 
-            return 'rgb(' + Math.round(Math.random() * 150) + ", 255," + Math.round(Math.random() * 150) + ")"
+            return 'rgb(' + Math.round(Math.random() * 150) + "," + secondValue + "," + Math.round(Math.random() * 150) + ")"
         }
 
         function setColor() {
             document.getElementById('cardHead').style.backgroundColor = greenColor();
-            setTimeout(setColor, 2000);
+            setTimeout(setColor, 1000);
         }
         setColor();
     </script>
