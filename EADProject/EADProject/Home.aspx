@@ -136,7 +136,7 @@
         function greenColor() {
             var secondValue = Math.round(Math.random() * 25) + 230
 
-            return 'rgb(' + Math.round(Math.random() * 150) + "," + secondValue + "," + Math.round(Math.random() * 150) + ")"
+            return 'rgb(' + Math.round(Math.random() * 150) + "," + secondValue + "," + Math.round(Math.random() * 160) + ")"
         }
 
         function setColor() {

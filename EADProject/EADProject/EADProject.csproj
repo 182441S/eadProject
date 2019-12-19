@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -72,6 +73,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CustomerBooking.aspx" />
+    <Content Include="CustomerCustomisePlan.aspx" />
     <Content Include="CustomerPlan.aspx" />
     <Content Include="Cust_Review.aspx" />
     <Content Include="Details.aspx" />
@@ -79,6 +81,7 @@
     <Content Include="Global.asax" />
     <Content Include="Guide_Review.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\1200px-Truncated_Bar_Graph.png" />
     <Content Include="Images\GardensByTheBay.jpg" />
     <Content Include="Images\Marina Bay Sands.jpg" />
     <Content Include="Images\NationalMuseumSingapore.jpg" />
@@ -102,6 +105,7 @@
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="StaffEditPlan.aspx" />
     <Content Include="StaffGuide.aspx" />
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
@@ -116,6 +120,13 @@
     </Compile>
     <Compile Include="CustomerBooking.aspx.designer.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCustomisePlan.aspx.cs">
+      <DependentUpon>CustomerCustomisePlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerCustomisePlan.aspx.designer.cs">
+      <DependentUpon>CustomerCustomisePlan.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPlan.aspx.cs">
       <DependentUpon>CustomerPlan.aspx</DependentUpon>
@@ -183,6 +194,13 @@
     </Compile>
     <Compile Include="P_Details.aspx.designer.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffEditPlan.aspx.cs">
+      <DependentUpon>StaffEditPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffEditPlan.aspx.designer.cs">
+      <DependentUpon>StaffEditPlan.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffGuide.aspx.cs">
       <DependentUpon>StaffGuide.aspx</DependentUpon>
