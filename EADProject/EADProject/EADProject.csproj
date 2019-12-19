@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,21 +68,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BookingHistory.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CustomerBooking.aspx" />
+    <Content Include="CustomerCustomisePlan.aspx" />
     <Content Include="CustomerPlan.aspx" />
     <Content Include="Cust_Review.aspx" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Guide_Review.aspx" />
     <Content Include="Home.aspx" />
-    <Content Include="Images\Femaleavatar.png" />
+    <Content Include="Images\1200px-Truncated_Bar_Graph.png" />
     <Content Include="Images\GardensByTheBay.jpg" />
-    <Content Include="Images\JackJonesAvatar.png" />
     <Content Include="Images\Marina Bay Sands.jpg" />
     <Content Include="Images\NationalMuseumSingapore.jpg" />
     <Content Include="Images\ResortsWorldSentosa.jpg" />
@@ -96,7 +96,6 @@
     <Content Include="Images\VictoriaConcertHall.jpg" />
     <Content Include="JobListing.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="PaymentSimulation.aspx" />
     <Content Include="P_Details.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -105,30 +104,28 @@
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="StaffEditPlan.aspx" />
     <Content Include="StaffGuide.aspx" />
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
-    <Content Include="StyleSheets\jobListing.css" />
     <Content Include="StyleSheets\navbarV2.css" />
-    <Content Include="StyleSheets\PaymentSimulation.css" />
     <Content Include="T_Details.aspx" />
-    <Content Include="ViewTourguideDetails.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookingHistory.aspx.cs">
-      <DependentUpon>BookingHistory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BookingHistory.aspx.designer.cs">
-      <DependentUpon>BookingHistory.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CustomerBooking.aspx.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerBooking.aspx.designer.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCustomisePlan.aspx.cs">
+      <DependentUpon>CustomerCustomisePlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerCustomisePlan.aspx.designer.cs">
+      <DependentUpon>CustomerCustomisePlan.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPlan.aspx.cs">
       <DependentUpon>CustomerPlan.aspx</DependentUpon>
@@ -182,13 +179,6 @@
     <Compile Include="navbarV2.Master.designer.cs">
       <DependentUpon>navbarV2.Master</DependentUpon>
     </Compile>
-    <Compile Include="PaymentSimulation.aspx.cs">
-      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PaymentSimulation.aspx.designer.cs">
-      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="P_Details.aspx.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
@@ -196,6 +186,13 @@
     </Compile>
     <Compile Include="P_Details.aspx.designer.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffEditPlan.aspx.cs">
+      <DependentUpon>StaffEditPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffEditPlan.aspx.designer.cs">
+      <DependentUpon>StaffEditPlan.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffGuide.aspx.cs">
       <DependentUpon>StaffGuide.aspx</DependentUpon>
@@ -224,13 +221,6 @@
     </Compile>
     <Compile Include="T_Details.aspx.designer.cs">
       <DependentUpon>T_Details.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewTourguideDetails.aspx.cs">
-      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewTourguideDetails.aspx.designer.cs">
-      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
