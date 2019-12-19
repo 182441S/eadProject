@@ -78,7 +78,7 @@
                 &#8227 Stay in a 5-star hotel<br />
                 &#8227 Transport provided
             </p>
-            <a id="btn" href="CustomerPlan.aspx" class="btn btn-primary">Book now!</a>
+            <a id="btn" href="Details.aspx" class="btn btn-primary">Book now!</a>
         </div>
     </div>
     <br />

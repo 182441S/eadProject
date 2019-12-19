@@ -74,6 +74,7 @@
     <Content Include="CustomerBooking.aspx" />
     <Content Include="CustomerPlan.aspx" />
     <Content Include="Cust_Review.aspx" />
+    <Content Include="Details.aspx" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Guide_Review.aspx" />
@@ -129,6 +130,13 @@
     </Compile>
     <Compile Include="Cust_Review.aspx.designer.cs">
       <DependentUpon>Cust_Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
