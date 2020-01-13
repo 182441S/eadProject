@@ -84,6 +84,7 @@
     <Content Include="Images\ResortsWorldSentosa.jpg" />
     <Content Include="Images\Siloso Beach.jpg" />
     <Content Include="Images\Singapore River.jpg" />
+    <Content Include="Images\Singapore-Tourism-Board-818x460.jpg" />
     <Content Include="Images\SingaporeBotanicGardens.jpg" />
     <Content Include="Images\SingaporeCBDSkyline.jpeg" />
     <Content Include="Images\SingaporeDuckTours.jpg" />
@@ -93,7 +94,10 @@
     <Content Include="Images\VictoriaConcertHall.jpg" />
     <Content Include="JobListing.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="LoginTG.aspx" />
     <Content Include="P_Details.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="RegisterTG.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="navbarV2.Master" />
@@ -105,7 +109,11 @@
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
+    <Content Include="TGParticulars.aspx" />
     <Content Include="T_Details.aspx" />
+    <Content Include="UpdateParticulars.aspx" />
+    <Content Include="UpdateTGParticulars.aspx" />
+    <Content Include="ViewCust.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +169,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LoginTG.aspx.cs">
+      <DependentUpon>LoginTG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginTG.aspx.designer.cs">
+      <DependentUpon>LoginTG.aspx</DependentUpon>
+    </Compile>
     <Compile Include="navbarV2.Master.cs">
       <DependentUpon>navbarV2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,6 +190,20 @@
     </Compile>
     <Compile Include="P_Details.aspx.designer.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterTG.aspx.cs">
+      <DependentUpon>RegisterTG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterTG.aspx.designer.cs">
+      <DependentUpon>RegisterTG.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffGuide.aspx.cs">
       <DependentUpon>StaffGuide.aspx</DependentUpon>
@@ -197,12 +226,40 @@
     <Compile Include="StaffStats.aspx.designer.cs">
       <DependentUpon>StaffStats.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TGParticulars.aspx.cs">
+      <DependentUpon>TGParticulars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TGParticulars.aspx.designer.cs">
+      <DependentUpon>TGParticulars.aspx</DependentUpon>
+    </Compile>
     <Compile Include="T_Details.aspx.cs">
       <DependentUpon>T_Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="T_Details.aspx.designer.cs">
       <DependentUpon>T_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateParticulars.aspx.cs">
+      <DependentUpon>UpdateParticulars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateParticulars.aspx.designer.cs">
+      <DependentUpon>UpdateParticulars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTGParticulars.aspx.cs">
+      <DependentUpon>UpdateTGParticulars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateTGParticulars.aspx.designer.cs">
+      <DependentUpon>UpdateTGParticulars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCust.aspx.cs">
+      <DependentUpon>ViewCust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewCust.aspx.designer.cs">
+      <DependentUpon>ViewCust.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
