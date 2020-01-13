@@ -63,7 +63,7 @@
                                     <label>Mobile: </label>
                                     <input type="text" id="mobileNo" class="form-control" />
                                 </div>
-                                <div class="col-md-3 col-sm-2 col-lg-2">
+                                <div class="col-md-2 col-sm-2 col-lg-2">
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-lg-3">
                                     <label>Travelling From: </label>
