@@ -21,9 +21,6 @@
         }
     </style>
     <div class="row">
-        <%--<div class="col-md-7">
-
-        </div>--%>
         <div class="col-md-5">
                 <div class="login-dark p-3 shadow-lg rounded">
                     <div class="pt-3">
@@ -34,46 +31,40 @@
                         <div class="row">
                             <div class="form-group col-5">
                                 <label class="text-white"> Name: </label>
-                                <input type="text" 
-                                    class="form-control form-control-sm bg-light" 
-                                    placeholder="Name">
+                                <asp:TextBox runat="server" ID="tbName" CssClass="form-control form-control-sm bg-light"
+                                    placeholder="Name"></asp:TextBox>
                             </div>
                         
                             <div class="form-group col-7">
                                 <label class="text-white"> Date of Birth: </label>
-                                <input type="date" 
-                                    class="form-control form-control-sm bg-light" 
-                                    placeholder="dd/mm/yyyy">
+                                <asp:TextBox runat="server" ID="tbDob" type="date" CssClass="form-control form-control-sm bg-light"
+                                    placeholder="dd/mm/yyyy"></asp:TextBox>
                             </div>
                         </div>
                                                     
                             <div class="form-group">
                                 <label class="text-white"> Telephone number: </label>
-                                <input type="text" 
-                                    class="form-control form-control-sm bg-light" 
-                                    placeholder="Number">
+                                <asp:TextBox runat="server" ID="tbPhone" type="phone" CssClass="form-control form-control-sm bg-light"
+                                    placeholder="Phone Number"></asp:TextBox>
                             </div>
 
                         <div class="form-group">
                             <label class="text-white"> Email Address: </label>
-                            <input type="email" 
-                                class="form-control form-control-sm bg-light" 
-                                placeholder="Email">
+                            <asp:TextBox runat="server" ID="tbEmail" type="email" CssClass="form-control form-control-sm bg-light"
+                                    placeholder="Email"></asp:TextBox>
                         </div>
 
                         <div class="row">
                             <div class="form-group col-6">
                                 <label class="text-white"> Password: </label>
-                                <input type="password" 
-                                    class="form-control form-control-sm bg-light" 
-                                    placeholder="Password">
+                                <asp:TextBox runat="server" ID="tbPassword" type="password" CssClass="form-control form-control-sm bg-light"
+                                    placeholder="Password"></asp:TextBox>
                             </div>
 
                             <div class="form-group col-6">
                                 <label class="text-white"> Confirm Password: </label>
-                                <input type="password" 
-                                    class="form-control form-control-sm bg-light" 
-                                    placeholder="Password">
+                                <asp:TextBox runat="server" ID="tbCPassword" type="password" CssClass="form-control form-control-sm bg-light"
+                                    placeholder="Confirm Password"></asp:TextBox>
                             </div>
                         </div>
 
@@ -83,11 +74,8 @@
                         </div>
 
                         <div class="mt-5">
-                            <button class="btn btn-light col">
-                                <a href="TGParticulars.aspx" style="color: black">
-                                Register
-                                </a>
-                            </button>
+                          <asp:Button ID="registerbtn" runat="server" CssClass="btn btn-light col" OnClick="registerbtn_Click" />
+                           
                         </div>
 
                         <div class="mt-2">

@@ -8,7 +8,7 @@
             margin-top: 50px;
         }
         body{
-            background-image: url(https://mothership.sg/canornot/img/uploads/images/000/001/183/original/sky;ine.jpg);
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/20/Rear_view_of_the_Merlion_statue_at_Merlion_Park%2C_Singapore%2C_with_Marina_Bay_Sands_in_the_distance_-_20140307.jpg);
             background-size:cover;
             }
     </style>
@@ -42,7 +42,9 @@
 
                         <div class="mt-5">
                             <button class="btn btn-sm btn-light col">
+                                <a href="CustomerPlan.aspx">
                                 Login
+                                </a>
                             </button>
                         </div>
 

@@ -68,6 +68,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Account.mdf" />
+    <Content Include="App_Data\Account_log.ldf">
+      <DependentUpon>Account.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -100,7 +104,8 @@
     <Content Include="Login.aspx" />
     <Content Include="LoginTG.aspx" />
     <Content Include="P_Details.aspx" />
-    <Content Include="Register.aspx" />
+    <Content Include="Register1.aspx" />
+    <Content Include="Register2.aspx" />
     <Content Include="RegisterTG.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -122,6 +127,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLL\Cust.cs" />
+    <Compile Include="BLLL\Tour.cs" />
     <Compile Include="CustomerBooking.aspx.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,6 +157,7 @@
     <Compile Include="Cust_Review.aspx.designer.cs">
       <DependentUpon>Cust_Review.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\RegisterDAO.cs" />
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,12 +218,19 @@
     <Compile Include="P_Details.aspx.designer.cs">
       <DependentUpon>P_Details.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Register1.aspx.cs">
+      <DependentUpon>Register1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Register1.aspx.designer.cs">
+      <DependentUpon>Register1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register2.aspx.cs">
+      <DependentUpon>Register2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register2.aspx.designer.cs">
+      <DependentUpon>Register2.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegisterTG.aspx.cs">
       <DependentUpon>RegisterTG.aspx</DependentUpon>
@@ -303,7 +318,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
