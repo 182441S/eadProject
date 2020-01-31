@@ -11,7 +11,7 @@ namespace EADProject
 {
 
 
-    public partial class T_Details
+    public partial class ViewCust
     {
     }
 }

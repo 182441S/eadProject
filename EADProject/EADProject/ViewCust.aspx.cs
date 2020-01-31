@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EADProject
 {
-    public partial class P_Details : System.Web.UI.Page
+    public partial class ViewCust : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

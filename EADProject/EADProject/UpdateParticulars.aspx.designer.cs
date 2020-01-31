@@ -11,7 +11,7 @@ namespace EADProject
 {
 
 
-    public partial class P_Details
+    public partial class UpdateParticulars
     {
     }
 }

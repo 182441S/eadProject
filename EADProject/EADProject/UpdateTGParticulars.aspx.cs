@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EADProject
 {
-    public partial class Cust_Review : System.Web.UI.Page
+    public partial class UpdateTGParticulars : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

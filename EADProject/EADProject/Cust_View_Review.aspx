@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarV2.Master" AutoEventWireup="true" CodeBehind="Guide_Review.aspx.cs" Inherits="EADProject.Guide_Review" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarV2.Master" AutoEventWireup="true" CodeBehind="Cust_View_Review.aspx.cs" Inherits="EADProject.Guide_Review" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -14,7 +14,7 @@
             padding: inherit;
         }
     </style>
-    <div class="row">
+    <%--    <div class="row">
         <div class="accordion col-md-8 col-sm-8 col-lg-8" id="accordion">
             <div class="card">
                 <div id="cardHead" class="card-header text-center">
@@ -60,22 +60,50 @@
                 </div>
             </div>
         </div>
+    </div>--%>
 
-        <%--<div class="col-md-1 col-sm-1 col-lg-1">
 
-        </div>
+    <asp:DataList ID="reviewList" DataSourceID="reviewLink" runat="server" RepeatColumns="1" RepeatDirection="Vertical" CssClass="col-md-12 col-lg-12 col-sm-12">
+        <HeaderTemplate>
 
-        <div class="col-md-3 col-sm-3 col-lg-3">
-            <div class="card" >
-                <div class="card-header">
-                    Quick Links
+            <div class="row">
+                <div class="accordion col-md-12 col-sm-12 col-lg-12" id="accordion">
+                    <div class="card">
+                        <div id="cardHead" class="card-header text-center">
+                            Your recent reviews are below.
+                        </div>
+
+                    </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="#">Eyes</a></li>
-                    <li class="list-group-item"><a href="#">Eyes</a></li>
-                    <li class="list-group-item"><a href="#">Eyes</a></li>
-                </ul>
             </div>
-        </div>--%>
-    </div>
+
+        </HeaderTemplate>
+        <ItemTemplate>
+            <%--
+            <button id="btn" class="btn col-md-8 col-sm-8 col-lg-" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="card-header text-left" id="headingOne">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            Customer: Benny Tan
+                        </div>
+                    </div>
+                </div>
+            </button>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">--%>
+            <div class="card-body">
+                <div>
+                    <%#Eval("title") %>
+                </div>
+                <div>
+                    <%#Eval("content") %>
+                </div>
+            </div>
+            <%--            </div>--%>
+        </ItemTemplate>
+        <SeparatorTemplate>
+            <hr>
+        </SeparatorTemplate>
+    </asp:DataList>
+    <asp:SqlDataSource ID="reviewLink" runat="server" ConnectionString="<%$ ConnectionStrings:ConnStr %>" SelectCommand="select * from [Reviews]"></asp:SqlDataSource>
 </asp:Content>

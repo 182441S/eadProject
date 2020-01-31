@@ -11,7 +11,7 @@ namespace EADProject
 {
 
 
-    public partial class Guide_Review
+    public partial class LoginTG
     {
     }
 }
