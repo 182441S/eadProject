@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\justx\OneDrive\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
@@ -68,6 +72,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EADP_DB.mdf" />
+    <Content Include="App_Data\EADP_DB_log.ldf">
+      <DependentUpon>EADP_DB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -97,7 +105,6 @@
     <Content Include="Images\VictoriaConcertHall.jpg" />
     <Content Include="JobListing.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="P_Details.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="navbarV2.Master" />
@@ -110,10 +117,11 @@
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
-    <Content Include="T_Details.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\C_Details.cs" />
+    <Compile Include="BLL\Review.cs" />
     <Compile Include="CustomerBooking.aspx.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,6 +150,8 @@
     <Compile Include="Cust_Review.aspx.designer.cs">
       <DependentUpon>Cust_Review.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\C_DetailsDAO.cs" />
+    <Compile Include="DAL\ReviewDAO.cs" />
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,13 +198,6 @@
       <DependentUpon>navbarV2.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="P_Details.aspx.cs">
-      <DependentUpon>P_Details.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="P_Details.aspx.designer.cs">
-      <DependentUpon>P_Details.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StaffEditPlan.aspx.cs">
       <DependentUpon>StaffEditPlan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,13 +226,6 @@
     <Compile Include="StaffStats.aspx.designer.cs">
       <DependentUpon>StaffStats.aspx</DependentUpon>
     </Compile>
-    <Compile Include="T_Details.aspx.cs">
-      <DependentUpon>T_Details.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="T_Details.aspx.designer.cs">
-      <DependentUpon>T_Details.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\glyphicons-halflings-regular.eot" />
@@ -246,7 +242,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

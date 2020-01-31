@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
-        <form method="post" action="Home.aspx" runat="server">
+        <form method="post" runat="server">
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-lg-6">
                     <div class="form-group">
@@ -15,7 +15,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-lg-4">
-                    <button type="submit" onclick="location.href='Home.aspx';" class="btn btn-warning btn-send">Submit Review</button>
+                    <button id="insertReview" runat="server" onserverclick="insertReview_ServerClick" class="btn btn-warning btn-send">Submit Review</button>
                 </div>
             </div>
         </form>

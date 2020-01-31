@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EADProject.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,14 @@ namespace EADProject
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void insertReview_ServerClick(object sender, EventArgs e)
+        {
+            Review a = new Review();
+            int b = a.insertReview(review.Text);
+
+            Response.Redirect("Guide_Review.aspx");
         }
     }
 }
