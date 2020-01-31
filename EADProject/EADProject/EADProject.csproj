@@ -68,6 +68,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TourismDB.mdf" />
+    <Content Include="App_Data\TourismDB_log.ldf">
+      <DependentUpon>TourismDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -113,6 +117,7 @@
     <Content Include="StaffGuide.aspx" />
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
+    <Content Include="StaffUpdatePlan.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
     <Content Include="TGParticulars.aspx" />
     <Content Include="T_Details.aspx" />
@@ -122,6 +127,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BookingDetails.cs" />
+    <Compile Include="BLL\PlanDetails.cs" />
     <Compile Include="CustomerBooking.aspx.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,6 +157,8 @@
     <Compile Include="Cust_Review.aspx.designer.cs">
       <DependentUpon>Cust_Review.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\BookingDetailsDAO.cs" />
+    <Compile Include="DAL\PlanDetailsDAO.cs" />
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -252,6 +261,13 @@
     <Compile Include="StaffStats.aspx.designer.cs">
       <DependentUpon>StaffStats.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StaffUpdatePlan.aspx.cs">
+      <DependentUpon>StaffUpdatePlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffUpdatePlan.aspx.designer.cs">
+      <DependentUpon>StaffUpdatePlan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TGParticulars.aspx.cs">
       <DependentUpon>TGParticulars.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -303,7 +319,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
