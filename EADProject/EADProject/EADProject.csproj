@@ -68,6 +68,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\tourDB.mdf" />
+    <Content Include="App_Data\tourDB_log.ldf">
+      <DependentUpon>tourDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="BookingHistory.aspx" />
+    <Content Include="Images\Femaleavatar.png" />
+    <Content Include="Images\JackJonesAvatar.png" />
+    <Content Include="PaymentSimulation.aspx" />
+    <Content Include="StyleSheets\jobListing.css" />
+    <Content Include="StyleSheets\PaymentSimulation.css" />
+    <Content Include="ViewTourguideDetails.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -111,9 +122,35 @@
     <Content Include="StaffStats.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
     <Content Include="T_Details.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\TourGuide.cs" />
+    <Compile Include="BookingHistory.aspx.cs">
+      <DependentUpon>BookingHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingHistory.aspx.designer.cs">
+      <DependentUpon>BookingHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\bookinghistoryDAO.cs" />
+    <Compile Include="DAL\ViewtourguideDetailsDAO.cs" />
+    <Compile Include="PaymentSimulation.aspx.cs">
+      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSimulation.aspx.designer.cs">
+      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTourguideDetails.aspx.cs">
+      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTourguideDetails.aspx.designer.cs">
+      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerBooking.aspx.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -246,7 +283,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
