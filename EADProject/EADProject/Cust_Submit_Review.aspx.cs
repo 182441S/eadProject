@@ -18,9 +18,9 @@ namespace EADProject
         protected void insertReview_ServerClick(object sender, EventArgs e)
         {
             Review a = new Review();
-            int b = a.insertReview(review.Text);
+            int b = a.insertReview();
 
-            Response.Redirect("Guide_Review.aspx");
+            Response.Redirect("Cust_View_Review.aspx");
         }
     }
 }

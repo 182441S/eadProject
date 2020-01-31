@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarV2.Master" AutoEventWireup="true" CodeBehind="Guide_Review.aspx.cs" Inherits="EADProject.Guide_Review" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarV2.Master" AutoEventWireup="true" CodeBehind="Cust_View_Review.aspx.cs" Inherits="EADProject.Guide_Review" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -93,7 +93,7 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">--%>
             <div class="card-body">
                 <div>
-                    Testing
+                    <%#Eval("title") %>
                 </div>
                 <div>
                     <%#Eval("content") %>
