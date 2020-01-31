@@ -161,6 +161,8 @@
     <Compile Include="ViewTourguideDetails.aspx.designer.cs">
       <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BLL\BookingDetails.cs" />
+    <Compile Include="BLL\PlanDetails.cs" />
     <Compile Include="BLL\Cust.cs" />
     <Compile Include="BLL\Tour.cs" />
     <Compile Include="BLL\Review.cs" />
@@ -193,6 +195,8 @@
     <Compile Include="Cust_Submit_Review.aspx.designer.cs">
       <DependentUpon>Cust_Submit_Review.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\BookingDetailsDAO.cs" />
+    <Compile Include="DAL\PlanDetailsDAO.cs" />
     <Compile Include="DAL\RegisterDAO.cs" />
     <Compile Include="DAL\ReviewDAO.cs" />
     <Compile Include="DAL\C_DetailsDAO.cs" />
