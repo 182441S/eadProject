@@ -43,10 +43,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\justx\OneDrive\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
-    </Reference>
+   
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
@@ -72,10 +69,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EADP_DB.mdf" />
-    <Content Include="App_Data\EADP_DB_log.ldf">
+    <Content Include="App_Data\tourDB.mdf" />
+    <Content Include="App_Data\tourDB_log.ldf">
       <DependentUpon>EADP_DB.mdf</DependentUpon>
     </Content>
+    <Content Include="BookingHistory.aspx"/>
+    <Content Include="Images\Femaleavatar.png"/>
+    <Content Include="Image\JackJonesAvatar.png"/>
+    <Content Include="PaymentSimulation.aspx"/>
+    <Content Include="StyleSheets\jobListing.css"/>
+    <Content Include="StyleSheets\PaymentSimulation.css"/>
+    <Content Include="ViewTourguideDetails.aspx"/>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -128,6 +132,31 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="BLL\TourGuide.cs" />
+    <Compile Include="BookingHistory.aspx.cs">
+      <DependentUpon>BookingHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingHistory.aspx.designer.cs">
+      <DependentUpon>BookingHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\bookinghistoryDAO.cs" />
+    <Compile Include="DAL\ViewtourguideDetailsDAO.cs" />
+    <Compile Include="PaymentSimulation.aspx.cs">
+      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSimulation.aspx.designer.cs">
+      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTourguideDetails.aspx.cs">
+      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTourguideDetails.aspx.designer.cs">
+      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BLL\Cust.cs" />
     <Compile Include="BLL\Tour.cs" />
     <Compile Include="BLL\Review.cs" />
