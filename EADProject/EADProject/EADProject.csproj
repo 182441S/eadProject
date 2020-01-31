@@ -71,6 +71,10 @@
   <ItemGroup>
     <Content Include="App_Data\tourDB.mdf" />
     <Content Include="App_Data\tourDB_log.ldf">
+      <DependentUpon>tourDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\EADP_DB.mdf" />
+    <Content Include="App_Data\EADP_DB_log.ldf">
       <DependentUpon>EADP_DB.mdf</DependentUpon>
     </Content>
     <Content Include="BookingHistory.aspx"/>
