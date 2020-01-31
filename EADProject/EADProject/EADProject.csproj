@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\justx\OneDrive\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
@@ -68,9 +72,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Account.mdf" />
-    <Content Include="App_Data\Account_log.ldf">
-      <DependentUpon>Account.mdf</DependentUpon>
+    <Content Include="App_Data\EADP_DB.mdf" />
+    <Content Include="App_Data\EADP_DB_log.ldf">
+      <DependentUpon>EADP_DB.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -103,7 +107,6 @@
     <Content Include="JobListing.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="LoginTG.aspx" />
-    <Content Include="P_Details.aspx" />
     <Content Include="Register1.aspx" />
     <Content Include="Register2.aspx" />
     <Content Include="RegisterTG.aspx" />
@@ -120,7 +123,6 @@
     <Content Include="StaffStats.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
     <Content Include="TGParticulars.aspx" />
-    <Content Include="T_Details.aspx" />
     <Content Include="UpdateParticulars.aspx" />
     <Content Include="UpdateTGParticulars.aspx" />
     <Content Include="ViewCust.aspx" />
@@ -129,6 +131,8 @@
   <ItemGroup>
     <Compile Include="BLLL\Cust.cs" />
     <Compile Include="BLLL\Tour.cs" />
+    <Compile Include="BLL\Review.cs" />
+    <Compile Include="BLL\C_Details.cs" />
     <Compile Include="CustomerBooking.aspx.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -158,6 +162,8 @@
       <DependentUpon>Cust_Review.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\RegisterDAO.cs" />
+    <Compile Include="DAL\ReviewDAO.cs" />
+    <Compile Include="DAL\C_DetailsDAO.cs" />
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,13 +217,6 @@
       <DependentUpon>navbarV2.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="P_Details.aspx.cs">
-      <DependentUpon>P_Details.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="P_Details.aspx.designer.cs">
-      <DependentUpon>P_Details.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Register1.aspx.cs">
       <DependentUpon>Register1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -273,13 +272,6 @@
     </Compile>
     <Compile Include="TGParticulars.aspx.designer.cs">
       <DependentUpon>TGParticulars.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="T_Details.aspx.cs">
-      <DependentUpon>T_Details.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="T_Details.aspx.designer.cs">
-      <DependentUpon>T_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateParticulars.aspx.cs">
       <DependentUpon>UpdateParticulars.aspx</DependentUpon>
