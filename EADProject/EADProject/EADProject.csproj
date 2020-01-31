@@ -108,7 +108,6 @@
     <Content Include="Login.aspx" />
     <Content Include="LoginTG.aspx" />
     <Content Include="Register1.aspx" />
-    <Content Include="Register2.aspx" />
     <Content Include="RegisterTG.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -129,8 +128,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLLL\Cust.cs" />
-    <Compile Include="BLLL\Tour.cs" />
+    <Compile Include="BLL\Cust.cs" />
+    <Compile Include="BLL\Tour.cs" />
     <Compile Include="BLL\Review.cs" />
     <Compile Include="BLL\C_Details.cs" />
     <Compile Include="CustomerBooking.aspx.cs">
@@ -223,13 +222,6 @@
     </Compile>
     <Compile Include="Register1.aspx.designer.cs">
       <DependentUpon>Register1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Register2.aspx.cs">
-      <DependentUpon>Register2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register2.aspx.designer.cs">
-      <DependentUpon>Register2.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegisterTG.aspx.cs">
       <DependentUpon>RegisterTG.aspx</DependentUpon>
