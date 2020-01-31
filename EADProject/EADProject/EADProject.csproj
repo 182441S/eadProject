@@ -43,6 +43,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+   
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
@@ -68,10 +69,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TourismDB.mdf" />
-    <Content Include="App_Data\TourismDB_log.ldf">
-      <DependentUpon>TourismDB.mdf</DependentUpon>
+    <Content Include="App_Data\EADP_DB.mdf" />
+    <Content Include="App_Data\EADP_DB_log.ldf">
+      <DependentUpon>EADP_DB.mdf</DependentUpon>
     </Content>
+    <Content Include="BookingHistory.aspx"/>
+    <Content Include="Images\Femaleavatar.png"/>
+    <Content Include="Image\JackJonesAvatar.png"/>
+    <Content Include="PaymentSimulation.aspx"/>
+    <Content Include="StyleSheets\jobListing.css"/>
+    <Content Include="StyleSheets\PaymentSimulation.css"/>
+    <Content Include="ViewTourguideDetails.aspx"/>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -79,11 +87,11 @@
     <Content Include="CustomerBooking.aspx" />
     <Content Include="CustomerCustomisePlan.aspx" />
     <Content Include="CustomerPlan.aspx" />
-    <Content Include="Cust_Review.aspx" />
+    <Content Include="Cust_Submit_Review.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Guide_Review.aspx" />
+    <Content Include="Cust_View_Review.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1200px-Truncated_Bar_Graph.png" />
     <Content Include="Images\GardensByTheBay.jpg" />
@@ -103,8 +111,7 @@
     <Content Include="JobListing.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="LoginTG.aspx" />
-    <Content Include="P_Details.aspx" />
-    <Content Include="Register.aspx" />
+    <Content Include="Register1.aspx" />
     <Content Include="RegisterTG.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -117,18 +124,43 @@
     <Content Include="StaffGuide.aspx" />
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
-    <Content Include="StaffUpdatePlan.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
     <Content Include="TGParticulars.aspx" />
-    <Content Include="T_Details.aspx" />
     <Content Include="UpdateParticulars.aspx" />
     <Content Include="UpdateTGParticulars.aspx" />
     <Content Include="ViewCust.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BookingDetails.cs" />
-    <Compile Include="BLL\PlanDetails.cs" />
+
+    <Compile Include="BLL\TourGuide.cs" />
+    <Compile Include="BookingHistory.aspx.cs">
+      <DependentUpon>BookingHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingHistory.aspx.designer.cs">
+      <DependentUpon>BookingHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\bookinghistoryDAO.cs" />
+    <Compile Include="DAL\ViewtourguideDetailsDAO.cs" />
+    <Compile Include="PaymentSimulation.aspx.cs">
+      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSimulation.aspx.designer.cs">
+      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTourguideDetails.aspx.cs">
+      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTourguideDetails.aspx.designer.cs">
+      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Cust.cs" />
+    <Compile Include="BLL\Tour.cs" />
+    <Compile Include="BLL\Review.cs" />
+    <Compile Include="BLL\C_Details.cs" />
     <Compile Include="CustomerBooking.aspx.cs">
       <DependentUpon>CustomerBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,15 +182,16 @@
     <Compile Include="CustomerPlan.aspx.designer.cs">
       <DependentUpon>CustomerPlan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cust_Review.aspx.cs">
-      <DependentUpon>Cust_Review.aspx</DependentUpon>
+    <Compile Include="Cust_Submit_Review.aspx.cs">
+      <DependentUpon>Cust_Submit_Review.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cust_Review.aspx.designer.cs">
-      <DependentUpon>Cust_Review.aspx</DependentUpon>
+    <Compile Include="Cust_Submit_Review.aspx.designer.cs">
+      <DependentUpon>Cust_Submit_Review.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DAL\BookingDetailsDAO.cs" />
-    <Compile Include="DAL\PlanDetailsDAO.cs" />
+    <Compile Include="DAL\RegisterDAO.cs" />
+    <Compile Include="DAL\ReviewDAO.cs" />
+    <Compile Include="DAL\C_DetailsDAO.cs" />
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,12 +202,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Guide_Review.aspx.cs">
-      <DependentUpon>Guide_Review.aspx</DependentUpon>
+    <Compile Include="Cust_View_Review.aspx.cs">
+      <DependentUpon>Cust_View_Review.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Guide_Review.aspx.designer.cs">
-      <DependentUpon>Guide_Review.aspx</DependentUpon>
+    <Compile Include="Cust_View_Review.aspx.designer.cs">
+      <DependentUpon>Cust_View_Review.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -212,19 +245,12 @@
       <DependentUpon>navbarV2.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="P_Details.aspx.cs">
-      <DependentUpon>P_Details.aspx</DependentUpon>
+    <Compile Include="Register1.aspx.cs">
+      <DependentUpon>Register1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="P_Details.aspx.designer.cs">
-      <DependentUpon>P_Details.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Register1.aspx.designer.cs">
+      <DependentUpon>Register1.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegisterTG.aspx.cs">
       <DependentUpon>RegisterTG.aspx</DependentUpon>
@@ -261,26 +287,12 @@
     <Compile Include="StaffStats.aspx.designer.cs">
       <DependentUpon>StaffStats.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StaffUpdatePlan.aspx.cs">
-      <DependentUpon>StaffUpdatePlan.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StaffUpdatePlan.aspx.designer.cs">
-      <DependentUpon>StaffUpdatePlan.aspx</DependentUpon>
-    </Compile>
     <Compile Include="TGParticulars.aspx.cs">
       <DependentUpon>TGParticulars.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TGParticulars.aspx.designer.cs">
       <DependentUpon>TGParticulars.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="T_Details.aspx.cs">
-      <DependentUpon>T_Details.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="T_Details.aspx.designer.cs">
-      <DependentUpon>T_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateParticulars.aspx.cs">
       <DependentUpon>UpdateParticulars.aspx</DependentUpon>

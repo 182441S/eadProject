@@ -67,8 +67,8 @@
                     Reviews
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarReviews">
-                    <a class="dropdown-item" href="Cust_Review.aspx">Submit Review</a>
-                    <a class="dropdown-item" href="Guide_Review.aspx">View Reviews</a>
+                    <a class="dropdown-item" href="Cust_Submit_Review.aspx">Submit Review</a>
+                    <a class="dropdown-item" href="Cust_View_Review.aspx">View Reviews</a>
                 </div>
             </li>
             <li class="nav-item dropdown">

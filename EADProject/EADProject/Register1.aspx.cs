@@ -1,4 +1,4 @@
-﻿using EADProject.BLLL;
+﻿using EADProject.BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +52,15 @@ namespace EADProject
         protected void registerbttn_ServerClick(object sender, EventArgs e)
         {
             Cust d = new Cust();
-            int result = d.AddCustomer(tbname.Text,);
+            int result = d.AddCustomer(tbname.Text, Convert.ToDateTime(tbdob.Text), Convert.ToInt32(tbPhone.Text), tbEmail.Text, tbPassword.Text);
+            //if (Cust.)
+        }
+
+        protected void registerbtn_Click(object sender, EventArgs e)
+        {
+            Cust d = new Cust();
+            int result = d.AddCustomer(tbname.Text, Convert.ToDateTime(tbdob.Text), Convert.ToInt32(tbPhone.Text), tbEmail.Text, tbPassword.Text);
+
         }
     }
 }

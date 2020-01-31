@@ -5,8 +5,47 @@
     <form id="form1" runat="server">
     <link href="StyleSheets/PaymentSimulation.css" rel="stylesheet" />
 
+            <asp:DataList ID="DL1" DataSourceID="DBLink" runat="server" RepeatColumns="3" RepeatDirection="horizontal" CssClass="col-sm-12 col-md-12 col-lg-12">
+        <ItemTemplate>
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Images/JackJonesAvatar.png" style="width: 90px;" />
+                            <h1><%# Eval("Name") %></h1>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>
+                                <asp:Label ID="nricstring" runat="server" >NRIC: </asp:Label>
+                                <asp:Label ID="nriclbl" runat="server" ><%# Eval("nric") %></asp:Label>
+                            </p>
+                            
+                            
+                            <p>
+                                <asp:Label ID="Datejoinedstring" runat="server" Text="Label">Date Joined: </asp:Label>
+                                <asp:Label ID="joinDatelb" runat="server" ><%# Eval("Date Registered") %></asp:Label>
+                            </p>
+
+
+                            <p>
+                                <asp:Label ID="NoOfJobsstring" runat="server" Text="Label">No. of Jobs this month: </asp:Label>
+                                <asp:Label ID="NoOfJobslb" runat="server" ><%# Eval("NoOfJobs") %></asp:Label>
+                            </p>
+                            <p>
+                                <asp:Label ID="Ratingstring" runat="server" Text="Label">Past Month Rating:</asp:Label>
+                                <asp:Label ID="Ratinglb" runat="server" ><%# Eval("Rating") %>/10</asp:Label>
+                            </p>
+                            <p>
+                                <asp:Button ID="Button1" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" Text="Assign Bonus" />
+                            </p>
+                            <a class="statlink" href="#">More Detailed Statistics -></a>
+
+                        </div>
+                    </div>
+                </div>
+
+            
+            <%--<div class="col-sm-12 col-md-12 col-lg-4">
 
 
                 <div class="flip-card">
@@ -31,16 +70,16 @@
                                 <asp:Label ID="Ratinglb" runat="server" Text="Label">9.5/10</asp:Label>
                             </p>
                             <p>
-                                <asp:Button ID="Button1" class="Bonus" runat="server" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" Text="Assign Bonus" />
+                                <asp:Button ID="Button1" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" Text="Assign Bonus" />
                             </p>
-                            <a class="statlink" href="">More Detailed Statistics -></a>
+                            <a class="statlink" href="#">More Detailed Statistics -></a>
 
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--%>
             <!---------------------->
-            <div class="col-sm-12 col-md-12 col-lg-4">
+           <%-- <div class="col-sm-12 col-md-12 col-lg-4">
 
                 <div class="flip-card">
                     <div class="flip-card-inner">
@@ -67,7 +106,7 @@
                                 <asp:Button type="button" ID="Button2" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server" Text="Assign Bonus" OnClientClick="return false;" />
                             </p>
                             
-                            <a class="statlink" href="">More Detailed Statistics -></a>
+                            <a class="statlink" href="#">More Detailed Statistics -></a>
 
                         </div>
                     </div>
@@ -103,9 +142,9 @@
                                 <asp:Label ID="Label12" runat="server" Text="Label">7/10</asp:Label>
                             </p>
                             <p>
-                                <asp:Button ID="Button3" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" runat="server" Text="Assign Bonus" />
+                                <asp:Button ID="Button3" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" Text="Assign Bonus" />
                             </p>
-                            <a class="statlink" href="">More Detailed Statistics -></a>
+                            <a class="statlink" href="#">More Detailed Statistics -></a>
 
                         </div>
                     </div>
@@ -140,9 +179,9 @@
                                 <asp:Label ID="Label18" runat="server" Text="Label">7/10</asp:Label>
                             </p>
                             <p>
-                                <asp:Button ID="Button4" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" runat="server" Text="Assign Bonus" />
+                                <asp:Button ID="Button4" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" Text="Assign Bonus" />
                             </p>
-                            <a class="statlink" href="">More Detailed Statistics -></a>
+                            <a class="statlink" href="#">More Detailed Statistics -></a>
 
                         </div>
                     </div>
@@ -153,6 +192,7 @@
 
 
             <!---------------------->
+
             <div class="col-sm-12 col-md-12 col-lg-4">
 
                 <div class="flip-card">
@@ -177,16 +217,19 @@
                                 <asp:Label ID="Label24" runat="server" Text="Label">7/10</asp:Label>
                             </p>
                             <p>
-                                <asp:Button ID="Button5" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" runat="server" Text="Assign Bonus" />
+                                <asp:Button ID="Button5" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" Text="Assign Bonus" />
                             </p>
-                            <a class="statlink" href="">More Detailed Statistics -></a>
+                            <a class="statlink" href="#">More Detailed Statistics -></a>
 
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div>
+        </div>--%>
+            </ItemTemplate>
+    </asp:DataList>
+            <asp:SqlDataSource ID="DBLink" runat="server" ConnectionString="<%$ ConnectionStrings:ConnStr%>" SelectCommand="SELECT * FROM [TGDetails]"></asp:SqlDataSource>
 
        
 
@@ -201,34 +244,44 @@
                     </div>
                     <div class="modal-body">
                         <asp:Label ID="Label25" runat="server" Text="Tour Guide Name:"></asp:Label>
-                        &nbsp;<asp:Label ID="Label26" runat="server" Text="Jack Jones"></asp:Label>
+                        &nbsp;<asp:Label ID="Label26" runat="server" ><%# Eval("Name") %>Jackson</asp:Label>
+                        <br />
+                        <br />
+                        <asp:Label ID="Label1" runat="server" Text="NRIC:"></asp:Label>
+                        &nbsp;<asp:Label ID="Label2" runat="server" ><%# Eval("nric") %>S1234567A</asp:Label>
                         <br />
                         <br />
                         <asp:Label ID="Label27" runat="server" Text="Telephone Number:"></asp:Label>
-                        &nbsp;<asp:Label ID="Label28" runat="server" Text="87654321"></asp:Label>
+                        &nbsp;<asp:Label ID="Label28" runat="server" ><%# Eval("Phone.no") %>87654321</asp:Label>
                         <br />
                         <br />
                         <asp:Label ID="Label29" runat="server" Text="Email Address:"></asp:Label>
-                        &nbsp;<asp:Label ID="Label30" runat="server" Text="JackJones@gmail.com"></asp:Label>
+                        &nbsp;<asp:Label ID="Label30" runat="server"><%# Eval("Email") %>Jackson@gmail.com</asp:Label>
                         <br />
                         <br />
                         <asp:Label ID="Label31" runat="server" Text="Current monthly Salary:"></asp:Label>
-                        &nbsp;<asp:TextBox ID="tb32" runat="server" Text="$2500"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="salarytb" runat="server" Text=<%# Eval("Salary") %>>1000</asp:TextBox>
                         <br />
                         <br />
                         <asp:Label ID="Label33" runat="server" Text="Assign Bonus Amount($):"></asp:Label>
-                        &nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="bonusamttb" runat="server"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Button ID="Button6" runat="server" Text="Submit" />
+                        <asp:Label ID="Label32" runat="server" Text="Comments:"></asp:Label>
+                        &nbsp;<asp:TextBox ID="Commentstb" runat="server"></asp:TextBox>
+                        <br />
+                        <br />
+                                        <asp:FileUpload ID="FileUpload1" runat="server" />
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                        <button id="saveBTTN" class="btn btn-primary" data-dismiss="modal" runat="server" onserverclick="saveBTTN_ServerClick" >Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
+            
 
 
 

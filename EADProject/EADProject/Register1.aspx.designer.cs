@@ -10,25 +10,25 @@
 namespace EADProject {
     
     
-    public partial class RegisterTG {
+    public partial class Register {
         
         /// <summary>
-        /// tbName control.
+        /// tbname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbName;
+        protected global::System.Web.UI.WebControls.TextBox tbname;
         
         /// <summary>
-        /// tbDob control.
+        /// tbdob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDob;
+        protected global::System.Web.UI.WebControls.TextBox tbdob;
         
         /// <summary>
         /// tbPhone control.

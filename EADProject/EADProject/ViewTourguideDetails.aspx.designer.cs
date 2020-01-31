@@ -22,40 +22,67 @@ namespace EADProject {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// TextBox1 control.
+        /// TGSearchTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TGSearchTB;
         
         /// <summary>
-        /// Button1 control.
+        /// SearchBttn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button SearchBttn;
         
         /// <summary>
-        /// Label2 control.
+        /// error2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label error2;
         
         /// <summary>
-        /// Label7 control.
+        /// namestring control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label namestring;
+        
+        /// <summary>
+        /// nameLBL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nameLBL;
+        
+        /// <summary>
+        /// nricstring control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nricstring;
+        
+        /// <summary>
+        /// nricLBL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nricLBL;
         
         /// <summary>
         /// Label12 control.
@@ -67,13 +94,13 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// Label13 control.
+        /// genderLBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label genderLBL;
         
         /// <summary>
         /// Label3 control.
@@ -85,13 +112,13 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// Label8 control.
+        /// dobLBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label dobLBL;
         
         /// <summary>
         /// Label4 control.
@@ -103,13 +130,13 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// Label9 control.
+        /// emailLBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label emailLBL;
         
         /// <summary>
         /// Label5 control.
@@ -121,13 +148,13 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// Label10 control.
+        /// phoneLBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label phoneLBL;
         
         /// <summary>
         /// Label6 control.
@@ -139,12 +166,12 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// Label11 control.
+        /// dateregisteredLBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.Label dateregisteredLBL;
     }
 }
