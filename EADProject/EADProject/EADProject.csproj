@@ -73,6 +73,10 @@
     <Content Include="App_Data\EADP_DB_log.ldf">
       <DependentUpon>EADP_DB.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\TourismDB.mdf" />
+    <Content Include="App_Data\TourismDB_log.ldf">
+      <DependentUpon>TourismDB.mdf</DependentUpon>
+    </Content>
     <Content Include="BookingHistory.aspx"/>
     <Content Include="Images\Femaleavatar.png"/>
     <Content Include="Image\JackJonesAvatar.png"/>
