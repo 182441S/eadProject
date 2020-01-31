@@ -25,7 +25,7 @@ namespace EADProject.BLL
         public Review getReviews(string a)
         {
             ReviewDAO dao = new ReviewDAO();
-            return dao.RetrieveReviews(a);
+            return dao.RetrieveReviews();
         }
 
         public int insertReview()

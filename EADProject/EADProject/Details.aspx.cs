@@ -12,18 +12,18 @@ namespace EADProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string query = "S0123456B";
+            //string query = "S0123456B";
 
-            C_Details q = new C_Details();
-            q = q.getCustomerDetails(query);
-            lbName.Text = q.Name.ToString();
-            lbPassport.Text = q.PassportNo.ToString();
-            lbEmail.Text = q.Email.ToString();
-            lbMobile.Text = q.Mobile.ToString();
-            lbStart.Text = q.StartDate.ToString();
-            lbEnd.Text = q.EndDate.ToString();
-            lbOrigin.Text = q.Origin.ToString();
-            lbCard.Text = q.CardNo.ToString();
+            //C_Details q = new C_Details();
+            //q = q.getCustomerDetails(query);
+            //lbName.Text = q.Name.ToString();
+            //lbPassport.Text = q.PassportNo.ToString();
+            //lbEmail.Text = q.Email.ToString();
+            //lbMobile.Text = q.Mobile.ToString();
+            //lbStart.Text = q.StartDate.ToString();
+            //lbEnd.Text = q.EndDate.ToString();
+            //lbOrigin.Text = q.Origin.ToString();
+            //lbCard.Text = q.CardNo.ToString();
         }
 
         protected void submit_ServerClick(object sender, EventArgs e)

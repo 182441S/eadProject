@@ -11,16 +11,14 @@ namespace EADProject.DAL
 {
     public class ReviewDAO
     {
-        public Review RetrieveReviews(string title)
+        public Review RetrieveReviews()
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection connect = new SqlConnection(DBConnect);
 
-            string sqlStatement = "select * from Reviews where title = @paraTitle";
+            string sqlStatement = "select * from Reviews";
             SqlDataAdapter da = new SqlDataAdapter(sqlStatement, connect);
-
-
-            da.SelectCommand.Parameters.AddWithValue("@paraTitle", title);
+            
 
             DataSet ds = new DataSet();
 

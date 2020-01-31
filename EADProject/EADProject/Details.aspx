@@ -191,7 +191,7 @@
         </div>
     </form>
 
-    <div>
+    <%--<div>
         <div class="row">
             <label class="col-md-2 col-sm-2 col-lg-2">
                 Passport No.: 
@@ -256,7 +256,7 @@
 
             </asp:Label>
         </div>
-    </div>
+    </div>--%>
 
     <script>
         document.getElementById('<%= mobileNo.ClientID %>').addEventListener('input', function (e) {
