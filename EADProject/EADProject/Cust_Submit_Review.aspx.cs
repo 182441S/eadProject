@@ -22,7 +22,7 @@ namespace EADProject
 
             if (result == 1)
             {
-                Response.Redirect("Details.aspx");
+                Response.Redirect("Cust_View_Review.aspx");
             }
         }
     }
