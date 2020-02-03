@@ -77,15 +77,14 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarStaff">
                     <a class="dropdown-item" href="StaffPlan.aspx">Customise Plans</a>
-                    <a class="dropdown-item" href="StaffGuide.aspx">Manage Guides</a>
                     <a class="dropdown-item" href="StaffStats.aspx">View Statistics</a>
                 </div>
             </li>
              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarStaff" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarSimulation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Simulation
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarStaff">
+                <div class="dropdown-menu" aria-labelledby="navbarSimulation">
                     <a class="dropdown-item" href="PaymentSimulation.aspx">Payment Simulation</a>
                     <a class="dropdown-item" href="ViewTourguideDetails.aspx">Tour Guide Details</a>
                     <a class="dropdown-item" href="JobListing.aspx">Job listing</a>

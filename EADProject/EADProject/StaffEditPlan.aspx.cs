@@ -18,9 +18,9 @@ namespace EADProject
         protected void ButtonSave_Click(object sender, EventArgs e)
         {
             string name = TextBoxPlanName.Text.ToString();
-            string locationFirst = TextBoxLocation1Name.Text.ToString();
-            string locationSecond = TextBoxLocation2Name.Text.ToString();
-            string locationThird = TextBoxLocation3Name.Text.ToString();
+            string locationFirst = DropDownListLocFirst.SelectedValue;
+            string locationSecond = DropDownListLocSecond.SelectedValue;
+            string locationThird = DropDownListLocThird.SelectedValue;
             int price = int.Parse(TextBoxPrice.Text);
             int duration = int.Parse(TextBoxDuration.Text);
             string description = TextBoxDescription.Text.ToString();

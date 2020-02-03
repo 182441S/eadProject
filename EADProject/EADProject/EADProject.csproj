@@ -125,7 +125,6 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="StaffEditPlan.aspx" />
     <Content Include="StaffUpdatePlan.aspx" />
-    <Content Include="StaffGuide.aspx" />
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
@@ -279,13 +278,6 @@
     </Compile>
     <Compile Include="StaffEditPlan.aspx.designer.cs">
       <DependentUpon>StaffEditPlan.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="StaffGuide.aspx.cs">
-      <DependentUpon>StaffGuide.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StaffGuide.aspx.designer.cs">
-      <DependentUpon>StaffGuide.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffPlan.aspx.cs">
       <DependentUpon>StaffPlan.aspx</DependentUpon>

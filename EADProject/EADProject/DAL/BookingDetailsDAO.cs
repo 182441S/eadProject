@@ -91,5 +91,113 @@ namespace EADProject.DAL
 
             return list;
         }
+
+        public List<BookingDetails> RetrieveByName(string text)
+        {
+            List<BookingDetails> list = new List<BookingDetails>();
+
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "SELECT * FROM BookingDetails WHERE Name LIKE @paraText";
+
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+            sqlCmd.Parameters.AddWithValue("@paraText", text);
+
+            myConn.Open();
+
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                BookingDetails booking = Read(dr);
+                list.Add(booking);
+            }
+
+            myConn.Close();
+
+            return list;
+        }
+
+        public List<BookingDetails> RetrieveByDate(string text)
+        {
+            List<BookingDetails> list = new List<BookingDetails>();
+
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "SELECT * FROM BookingDetails WHERE DateBooked LIKE @paraText";
+
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+            sqlCmd.Parameters.AddWithValue("@paraText", text);
+
+            myConn.Open();
+
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                BookingDetails booking = Read(dr);
+                list.Add(booking);
+            }
+
+            myConn.Close();
+
+            return list;
+        }
+
+        public List<BookingDetails> RetrieveByStartDate(string text)
+        {
+            List<BookingDetails> list = new List<BookingDetails>();
+
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "SELECT * FROM BookingDetails WHERE StartDate LIKE @paraText";
+
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+            sqlCmd.Parameters.AddWithValue("@paraText", text);
+
+            myConn.Open();
+
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                BookingDetails booking = Read(dr);
+                list.Add(booking);
+            }
+
+            myConn.Close();
+
+            return list;
+        }
+
+        public List<BookingDetails> RetrieveByEndDate(string text)
+        {
+            List<BookingDetails> list = new List<BookingDetails>();
+
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "SELECT * FROM BookingDetails WHERE EndDate LIKE @paraText";
+
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+            sqlCmd.Parameters.AddWithValue("@paraText", text);
+
+            myConn.Open();
+
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                BookingDetails booking = Read(dr);
+                list.Add(booking);
+            }
+
+            myConn.Close();
+
+            return list;
+        }
     }
 }

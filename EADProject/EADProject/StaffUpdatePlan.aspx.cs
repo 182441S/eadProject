@@ -20,9 +20,9 @@ namespace EADProject
                 }
 
                 LabelPlanName.Text = Session["Name"].ToString();
-                TextBoxLocation1Name.Text = Session["Location1"].ToString();
-                TextBoxLocation2Name.Text = Session["Location2"].ToString();
-                TextBoxLocation3Name.Text = Session["Location3"].ToString();
+                DropDownListLocFirst.SelectedValue = Session["Location1"].ToString();
+                DropDownListLocSecond.SelectedValue = Session["Location2"].ToString();
+                DropDownListLocThird.SelectedValue = Session["Location3"].ToString();
                 TextBoxPrice.Text = Session["Price"].ToString();
                 TextBoxDuration.Text = Session["Duration"].ToString();
                 TextBoxDescription.Text = Session["Description"].ToString();
@@ -32,9 +32,9 @@ namespace EADProject
         protected void ButtonSave_Click(object sender, EventArgs e)
         {
             String name = LabelPlanName.Text.ToString();
-            String locationFirst = TextBoxLocation1Name.Text.ToString();
-            String locationSecond = TextBoxLocation2Name.Text.ToString();
-            String locationThird = TextBoxLocation3Name.Text.ToString();
+            String locationFirst = DropDownListLocFirst.SelectedValue;
+            String locationSecond = DropDownListLocSecond.SelectedValue;
+            String locationThird = DropDownListLocThird.SelectedValue;
             int price = int.Parse(TextBoxPrice.Text);
             int duration = int.Parse(TextBoxDuration.Text);
             String description = TextBoxDescription.Text.ToString();

@@ -49,13 +49,13 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// TextBoxLocation1Name control.
+        /// DropDownListLocFirst control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxLocation1Name;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListLocFirst;
         
         /// <summary>
         /// Label5 control.
@@ -67,13 +67,13 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// TextBoxLocation2Name control.
+        /// DropDownListLocSecond control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxLocation2Name;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListLocSecond;
         
         /// <summary>
         /// Label6 control.
@@ -85,13 +85,13 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// TextBoxLocation3Name control.
+        /// DropDownListLocThird control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxLocation3Name;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListLocThird;
         
         /// <summary>
         /// Label8 control.
