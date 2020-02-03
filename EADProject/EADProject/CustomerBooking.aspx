@@ -19,19 +19,21 @@
             Booking History
         </p>
         <div class="row">
-            <asp:GridView ID="GridViewBookings" runat="server" Height="500px" Width="1200px" AutoGenerateColumns="False">
-                <Columns>
-                    <asp:BoundField DataField="DateBooked" HeaderText="Date Booked" />
-                    <asp:BoundField DataField="Name" HeaderText="Plan Name" />
-                    <asp:BoundField DataField="Duration" HeaderText="Duration" />
-                    <asp:BoundField DataField="StartDate" HeaderText="Start Date" />
-                    <asp:BoundField DataField="EndDate" HeaderText="End Date" />
-                    <asp:BoundField DataField="Price" HeaderText="Amount Paid" />
-                    <asp:BoundField DataField="Location1" HeaderText="First Location" />
-                    <asp:BoundField DataField="Location2" HeaderText="Second Location" />
-                    <asp:BoundField DataField="Location3" HeaderText="Third Location" />
-                </Columns>
-            </asp:GridView>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <asp:GridView ID="GridViewBookings" runat="server" AutoGenerateColumns="False" CssClass="table table-striped" GridLines="None">
+                    <Columns>
+                        <asp:BoundField DataField="DateBooked" HeaderText="Date Booked" />
+                        <asp:BoundField DataField="Name" HeaderText="Plan Name" />
+                        <asp:BoundField DataField="Duration" HeaderText="Duration" />
+                        <asp:BoundField DataField="StartDate" HeaderText="Start Date" />
+                        <asp:BoundField DataField="EndDate" HeaderText="End Date" />
+                        <asp:BoundField DataField="Price" HeaderText="Amount Paid" />
+                        <asp:BoundField DataField="Location1" HeaderText="First Location" />
+                        <asp:BoundField DataField="Location2" HeaderText="Second Location" />
+                        <asp:BoundField DataField="Location3" HeaderText="Third Location" />
+                    </Columns>
+                </asp:GridView>
+            </div>
         </div>
     </form>
 </asp:Content>
