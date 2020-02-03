@@ -19,10 +19,10 @@ namespace EADProject.BLL
         public Review(string title, string content)
         {
             Content = content;
-            Title = Title;
+            Title = title;
         }
 
-        public Review getReviews(string a)
+        public Review getReviews()
         {
             ReviewDAO dao = new ReviewDAO();
             return dao.RetrieveReviews();
