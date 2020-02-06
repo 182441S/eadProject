@@ -90,11 +90,10 @@
     <Content Include="CustomerBooking.aspx" />
     <Content Include="CustomerCustomisePlan.aspx" />
     <Content Include="CustomerPlan.aspx" />
-    <Content Include="Cust_Submit_Review.aspx" />
+    <Content Include="Cust_Review.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Cust_View_Review.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1200px-Truncated_Bar_Graph.png" />
     <Content Include="Images\GardensByTheBay.jpg" />
@@ -186,12 +185,12 @@
     <Compile Include="CustomerPlan.aspx.designer.cs">
       <DependentUpon>CustomerPlan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cust_Submit_Review.aspx.cs">
-      <DependentUpon>Cust_Submit_Review.aspx</DependentUpon>
+    <Compile Include="Cust_Review.aspx.cs">
+      <DependentUpon>Cust_Review.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cust_Submit_Review.aspx.designer.cs">
-      <DependentUpon>Cust_Submit_Review.aspx</DependentUpon>
+    <Compile Include="Cust_Review.aspx.designer.cs">
+      <DependentUpon>Cust_Review.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\BookingDetailsDAO.cs" />
     <Compile Include="DAL\PlanDetailsDAO.cs" />
@@ -207,13 +206,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Cust_View_Review.aspx.cs">
-      <DependentUpon>Cust_View_Review.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cust_View_Review.aspx.designer.cs">
-      <DependentUpon>Cust_View_Review.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
