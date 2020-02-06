@@ -95,9 +95,20 @@ namespace EADProject
             BookingDetails bd = new BookingDetails(dateBooked, name, duration, startDate, endDate, price, location1, location2, location3);
             int result = bd.InsertBooking();
 
+            //if (result == 1)
+            //{
+            //    Response.Redirect("Home.aspx");
+            //}
+        }
+
+        protected void submit_ServerClick(object sender, EventArgs e)
+        {
+            C_Details r = new C_Details(name.Text, passNo.Text, email.Text, mobileNo.Text, cardNo.Text, month.Text, year.Text, ccv.Text);
+            int result = r.insertCustomerDetails();
+
             if (result == 1)
             {
-                Response.Redirect("Home.aspx");
+                Response.Redirect("BookingDetails.aspx");
             }
         }
     }

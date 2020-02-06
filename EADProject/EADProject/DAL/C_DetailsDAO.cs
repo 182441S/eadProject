@@ -19,17 +19,14 @@ namespace EADProject.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
             
-            string sqlStmt = "insert into Cust_Order_Details (name, email, mobile, passportNo, startDate, endDate, originLocation, cardNo, expiryMonth, expiryYear, ccv) " +
-                "values (@paraName, @paraEmail, @paraMobile, @paraPassportNo, @paraStartDate, @paraEndDate, @paraOriginLocation, @paraCardNo, @paraExpiryMonth, @paraExpiryYear, @paraCcv)";
+            string sqlStmt = "insert into Cust_Order_Details (name, email, mobile, passportNo, cardNo, expiryMonth, expiryYear, ccv) " +
+                "values (@paraName, @paraEmail, @paraMobile, @paraPassportNo, @paraCardNo, @paraExpiryMonth, @paraExpiryYear, @paraCcv)";
             sqlCmd = new SqlCommand(sqlStmt, myConn);
             
             sqlCmd.Parameters.AddWithValue("@paraName", a.Name);
             sqlCmd.Parameters.AddWithValue("@paraEmail", a.Email);
             sqlCmd.Parameters.AddWithValue("@paraMobile", a.Mobile);
             sqlCmd.Parameters.AddWithValue("@paraPassportNo", a.PassportNo);
-            sqlCmd.Parameters.AddWithValue("@paraStartDate", a.StartDate);
-            sqlCmd.Parameters.AddWithValue("@paraEndDate", a.EndDate);
-            sqlCmd.Parameters.AddWithValue("@paraOriginLocation", a.Origin);
             sqlCmd.Parameters.AddWithValue("@paraCardNo", a.CardNo);    
             sqlCmd.Parameters.AddWithValue("@paraExpiryMonth", a.ExpiryMonth);
             sqlCmd.Parameters.AddWithValue("@paraExpiryYear", a.ExpiryYear);
@@ -67,15 +64,12 @@ namespace EADProject.DAL
                 string passport = row["passportNo"].ToString();
                 string email = row["email"].ToString();
                 string mobile = row["mobile"].ToString();
-                string startDate = row["startDate"].ToString();
-                string endDate = row["endDate"].ToString();
-                string origin = row["originLocation"].ToString();
                 string cardNo = row["cardNo"].ToString();
                 string expiryMonth = row["expiryMonth"].ToString();
                 string expiryYear = row["expiryYear"].ToString();
                 string ccv = row["ccv"].ToString();
 
-                a = new C_Details(name, passport, email, mobile, startDate, endDate, origin, cardNo, expiryMonth, expiryYear, ccv);
+                a = new C_Details(name, passport, email, mobile, cardNo, expiryMonth, expiryYear, ccv);
             }
             return a;
         }

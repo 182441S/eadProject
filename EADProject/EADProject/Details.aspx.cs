@@ -28,7 +28,7 @@ namespace EADProject
 
         protected void submit_ServerClick(object sender, EventArgs e)
         {
-            C_Details r = new C_Details(name.Text, passNo.Text, email.Text, mobileNo.Text, dStart.Text, dEnd.Text, tFrom.Text, cardNo.Text, month.Text, year.Text, ccv.Text);
+            C_Details r = new C_Details(name.Text, passNo.Text, email.Text, mobileNo.Text, cardNo.Text, month.Text, year.Text, ccv.Text);
             int result = r.insertCustomerDetails();
 
             if(result == 1)
