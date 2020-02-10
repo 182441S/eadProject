@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Add New Plan" Language="C#" MasterPageFile="~/navbarV2.Master" AutoEventWireup="true" CodeBehind="StaffEditPlan.aspx.cs" Inherits="EADProject.StaffEditPlan" %>
-
+﻿<%@ Page Title="Update Plan" Language="C#" MasterPageFile="~/navbarV2.Master" AutoEventWireup="true" CodeBehind="StaffUpdatePlan.aspx.cs" Inherits="EADProject.StaffUpdatePlan" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -30,7 +29,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="card-header" id="header">
-                    Add New Plan
+                    Edit Existing Plan
                 </div>
             </div>
         </div>
@@ -41,7 +40,7 @@
                     <asp:Label ID="Label3" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Plan Name:" Font-Bold="False"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBoxPlanName" runat="server" MaxLength="100" Width="170px" CssClass="bootstrap class form-control"></asp:TextBox>
+                    <asp:Label ID="LabelPlanName" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Font-Bold="True"></asp:Label>
                 </td>
             </tr>
             <tr>

@@ -18,6 +18,7 @@ namespace EADProject.DAL
 
             string sqlStatement = "select * from Reviews";
             SqlDataAdapter da = new SqlDataAdapter(sqlStatement, connect);
+            
 
             DataSet ds = new DataSet();
 
@@ -28,14 +29,15 @@ namespace EADProject.DAL
             for (int i = 0; i < recur_count; i++)
             {
                 DataRow row = ds.Tables[0].Rows[i];
+                string title = row["title"].ToString();
                 string content = row["content"].ToString();
 
-                a = new Review(content);
+                a = new Review(title, content);
             }
             return a;
         }
 
-        public int Insert(string a)
+        public int Insert(Review a)
         {
             int result = 0;
             SqlCommand sqlCmd = new SqlCommand();
@@ -43,9 +45,11 @@ namespace EADProject.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "insert into Reviews Values(@paraContent)";
+            string sqlStmt = "insert into Reviews (title, content) " + "values (@paraTitle, @paraContent)";
             sqlCmd = new SqlCommand(sqlStmt, myConn);
-            sqlCmd.Parameters.AddWithValue("@paraContent", a);
+
+            sqlCmd.Parameters.AddWithValue("@paraTitle", a.Title);
+            sqlCmd.Parameters.AddWithValue("@paraContent", a.Content);
 
 
             myConn.Open();

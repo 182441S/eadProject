@@ -72,62 +72,17 @@
             Featured Sale! 60% OFF!
         </div>
         <div class="card-body">
-            <h5 class="card-title">3D2N Singapore Package</h5>
+            <h5 class="card-title">6D5N Singapore Heritage Package</h5>
             <p class="card-text">
                 &#8227 Free & easy journey<br />
                 &#8227 Stay in a 5-star hotel<br />
                 &#8227 Transport provided
             </p>
-            <a id="btn" href="Details.aspx" class="btn btn-primary">Book now!</a>
+            <a id="btn" href="CustomerPlan.aspx" class="btn btn-primary">Book now!</a>
         </div>
     </div>
     <br />
-    <div class="row">
-        <div class="col-md-4 col-sm-4 col-lg-4">
-            <div class="card text-center">
-                <div class="card-header">
-                    ...
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Eyes</h5>
-                    <p class="card-text">
-                        &#8227 Enoyes
-                    </p>
-                    <a href="CustomerPlan.aspx" class="btn btn-primary">YEET</a>
-                </div>
-            </div>
-        </div>
-         <div class="col-md-4 col-sm-4 col-lg-4">
-            <div class="card text-center">
-                <div class="card-header">
-                    ...
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Eyes</h5>
-                    <p class="card-text">
-                        &#8227 Enoyes
-                    </p>
-                    <a href="CustomerPlan.aspx" class="btn btn-primary">YEET</a>
-                </div>
-            </div>
-        </div>
-         <div class="col-md-4 col-sm-4 col-lg-4">
-            <div class="card text-center">
-                <div class="card-header">
-                    ...
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Eyes</h5>
-                    <p class="card-text">
-                        &#8227 Enoyes
-                    </p>
-                    <a href="CustomerPlan.aspx" class="btn btn-primary">YEET</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+    
     <script>
         //function randomColor() {
         //    return '#' + ('000000' + (Math.random() * 0xFFFFFF << 0).toString(16)).slice(-6)

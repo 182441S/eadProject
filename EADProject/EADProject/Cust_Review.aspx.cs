@@ -17,10 +17,13 @@ namespace EADProject
 
         protected void insertReview_ServerClick(object sender, EventArgs e)
         {
-            Review a = new Review();
-            int b = a.insertReview(review.Text);
+            Review r = new Review(title.Text, review.Text);
+            int result = r.insertReview();
 
-            Response.Redirect("Guide_Review.aspx");
+            if (result == 1)
+            {
+                Response.Redirect("Cust_Review.aspx");
+            }
         }
     }
 }

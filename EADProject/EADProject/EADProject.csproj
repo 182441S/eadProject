@@ -76,6 +76,17 @@
     <Content Include="App_Data\EADP_DB_log.ldf">
       <DependentUpon>EADP_DB.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\TourismDB.mdf" />
+    <Content Include="App_Data\TourismDB_log.ldf">
+      <DependentUpon>TourismDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="BookingHistory.aspx" />
+    <Content Include="Images\Femaleavatar.png" />
+    <Content Include="Image\JackJonesAvatar.png" />
+    <Content Include="PaymentSimulation.aspx" />
+    <Content Include="StyleSheets\jobListing.css" />
+    <Content Include="StyleSheets\PaymentSimulation.css" />
+    <Content Include="ViewTourguideDetails.aspx" />
     <Content Include="App_Data\Account.mdf" />
     <Content Include="App_Data\Account_log.ldf">
       <DependentUpon>Account.mdf</DependentUpon>
@@ -91,7 +102,6 @@
     <Content Include="Details.aspx" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Guide_Review.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1200px-Truncated_Bar_Graph.png" />
     <Content Include="Images\GardensByTheBay.jpg" />
@@ -121,7 +131,7 @@
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="StaffEditPlan.aspx" />
-    <Content Include="StaffGuide.aspx" />
+    <Content Include="StaffUpdatePlan.aspx" />
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
@@ -132,6 +142,32 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\TourGuide.cs" />
+    <Compile Include="BookingHistory.aspx.cs">
+      <DependentUpon>BookingHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingHistory.aspx.designer.cs">
+      <DependentUpon>BookingHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\bookinghistoryDAO.cs" />
+    <Compile Include="DAL\ViewtourguideDetailsDAO.cs" />
+    <Compile Include="PaymentSimulation.aspx.cs">
+      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSimulation.aspx.designer.cs">
+      <DependentUpon>PaymentSimulation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTourguideDetails.aspx.cs">
+      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTourguideDetails.aspx.designer.cs">
+      <DependentUpon>ViewTourguideDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BookingDetails.cs" />
+    <Compile Include="BLL\PlanDetails.cs" />
     <Compile Include="BLL\Cust.cs" />
     <Compile Include="BLL\Tour.cs" />
     <Compile Include="BLL\Review.cs" />
@@ -164,6 +200,8 @@
     <Compile Include="Cust_Review.aspx.designer.cs">
       <DependentUpon>Cust_Review.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\BookingDetailsDAO.cs" />
+    <Compile Include="DAL\PlanDetailsDAO.cs" />
     <Compile Include="DAL\RegisterDAO.cs" />
     <Compile Include="DAL\RegisterTourDAO.cs" />
     <Compile Include="DAL\ReviewDAO.cs" />
@@ -239,6 +277,13 @@
     <Compile Include="StaffEditPlan.aspx.cs">
       <DependentUpon>StaffEditPlan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffUpdatePlan.aspx.cs">
+      <DependentUpon>StaffUpdatePlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffUpdatePlan.aspx.designer.cs">
+      <DependentUpon>StaffUpdatePlan.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffEditPlan.aspx.designer.cs">
       <DependentUpon>StaffEditPlan.aspx</DependentUpon>

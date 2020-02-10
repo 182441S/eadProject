@@ -9,15 +9,17 @@ namespace EADProject.BLL
     public class Review
     {
         public string Content { get; set; }
+        public string Title { get; set; }
 
         public Review()
         {
 
         }
 
-        public Review(string content)
+        public Review(string title, string content)
         {
             Content = content;
+            Title = title;
         }
 
         public Review getReviews()
@@ -26,10 +28,10 @@ namespace EADProject.BLL
             return dao.RetrieveReviews();
         }
 
-        public int insertReview(string content)
+        public int insertReview()
         {
             ReviewDAO dao = new ReviewDAO();
-            int result = dao.Insert(content);
+            int result = dao.Insert(this);
             return result;
         }
     }

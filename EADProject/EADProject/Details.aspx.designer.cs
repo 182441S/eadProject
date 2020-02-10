@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EADProject {
-    
-    
-    public partial class Details {
-        
+namespace EADProject
+{
+
+
+    public partial class Details
+    {
+
         /// <summary>
         /// name control.
         /// </summary>
@@ -20,16 +22,7 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox name;
-        
-        /// <summary>
-        /// dStart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dStart;
-        
+
         /// <summary>
         /// passNo control.
         /// </summary>
@@ -38,16 +31,7 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passNo;
-        
-        /// <summary>
-        /// dEnd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dEnd;
-        
+
         /// <summary>
         /// email control.
         /// </summary>
@@ -56,16 +40,7 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox email;
-        
-        /// <summary>
-        /// tFrom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tFrom;
-        
+
         /// <summary>
         /// mobileNo control.
         /// </summary>
@@ -74,7 +49,7 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox mobileNo;
-        
+
         /// <summary>
         /// cardNo control.
         /// </summary>
@@ -83,7 +58,7 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox cardNo;
-        
+
         /// <summary>
         /// month control.
         /// </summary>
@@ -92,7 +67,7 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox month;
-        
+
         /// <summary>
         /// year control.
         /// </summary>
@@ -101,7 +76,7 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox year;
-        
+
         /// <summary>
         /// ccv control.
         /// </summary>
@@ -110,7 +85,7 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ccv;
-        
+
         /// <summary>
         /// submit control.
         /// </summary>
@@ -119,77 +94,5 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton submit;
-        
-        /// <summary>
-        /// lbPassport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbPassport;
-        
-        /// <summary>
-        /// lbName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbName;
-        
-        /// <summary>
-        /// lbEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbEmail;
-        
-        /// <summary>
-        /// lbMobile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbMobile;
-        
-        /// <summary>
-        /// lbStart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbStart;
-        
-        /// <summary>
-        /// lbEnd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbEnd;
-        
-        /// <summary>
-        /// lbOrigin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbOrigin;
-        
-        /// <summary>
-        /// lbCard control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbCard;
     }
 }
