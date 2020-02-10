@@ -118,7 +118,7 @@
                     <asp:Label ID="Label6" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="First Location:"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownListFirst" runat="server" Width="300px">
+                    <asp:DropDownList ID="DropDownListFirst" runat="server" Width="300px" CssClass="bootstrap class form-control">
                         <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
                     </asp:DropDownList>
                 </td>
@@ -128,7 +128,7 @@
                     <asp:Label ID="Label7" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Second Location:"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownListSecond" runat="server" Width="300px">
+                    <asp:DropDownList ID="DropDownListSecond" runat="server" Width="300px" CssClass="bootstrap class form-control">
                         <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
                     </asp:DropDownList>
                 </td>
@@ -138,7 +138,7 @@
                     <asp:Label ID="Label8" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Third Location:"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownListThird" runat="server" Width="300px">
+                    <asp:DropDownList ID="DropDownListThird" runat="server" Width="300px" CssClass="bootstrap class form-control">
                         <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
                     </asp:DropDownList>
                 </td>
@@ -147,7 +147,9 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="LabelLocationError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>

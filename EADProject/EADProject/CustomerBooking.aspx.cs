@@ -34,9 +34,12 @@ namespace EADProject
 
                 bookingList = bd.GetAllBookings();
 
+                LabelBookingError.Visible = false;
+
                 GridViewBookings.Visible = true;
                 GridViewBookings.DataSource = bookingList;
                 GridViewBookings.DataBind();
+
             }
             else if (DropDownListParam.SelectedValue == "Date Booked")
             {
@@ -45,9 +48,21 @@ namespace EADProject
 
                 bookingList = bd.GetBookingsByDate(TextBoxSearch.Text);
 
-                GridViewBookings.Visible = true;
-                GridViewBookings.DataSource = bookingList;
-                GridViewBookings.DataBind();
+                if (!bookingList.Any())
+                {
+                    LabelBookingError.Text = "No bookings found!";
+                    LabelBookingError.Visible = true;
+
+                    GridViewBookings.Visible = false;
+                }
+                else
+                {
+                    LabelBookingError.Visible = false;
+
+                    GridViewBookings.Visible = true;
+                    GridViewBookings.DataSource = bookingList;
+                    GridViewBookings.DataBind();
+                }
             }
             else if (DropDownListParam.SelectedValue == "Plan Name")
             {
@@ -56,9 +71,21 @@ namespace EADProject
 
                 bookingList = bd.GetBookingsByName(TextBoxSearch.Text);
 
-                GridViewBookings.Visible = true;
-                GridViewBookings.DataSource = bookingList;
-                GridViewBookings.DataBind();
+                if (!bookingList.Any())
+                {
+                    LabelBookingError.Text = "No bookings found!";
+                    LabelBookingError.Visible = true;
+
+                    GridViewBookings.Visible = false;
+                }
+                else
+                {
+                    LabelBookingError.Visible = false;
+
+                    GridViewBookings.Visible = true;
+                    GridViewBookings.DataSource = bookingList;
+                    GridViewBookings.DataBind();
+                }                
             }
             else if (DropDownListParam.SelectedValue == "Start Date")
             {
@@ -67,9 +94,21 @@ namespace EADProject
 
                 bookingList = bd.GetBookingsByStartDate(TextBoxSearch.Text);
 
-                GridViewBookings.Visible = true;
-                GridViewBookings.DataSource = bookingList;
-                GridViewBookings.DataBind();
+                if (!bookingList.Any())
+                {
+                    LabelBookingError.Text = "No bookings found!";
+                    LabelBookingError.Visible = true;
+
+                    GridViewBookings.Visible = false;
+                }
+                else
+                {
+                    LabelBookingError.Visible = false;
+
+                    GridViewBookings.Visible = true;
+                    GridViewBookings.DataSource = bookingList;
+                    GridViewBookings.DataBind();
+                }                
             }
             else if (DropDownListParam.SelectedValue == "End Date")
             {
@@ -78,9 +117,21 @@ namespace EADProject
 
                 bookingList = bd.GetBookingsByEndDate(TextBoxSearch.Text);
 
-                GridViewBookings.Visible = true;
-                GridViewBookings.DataSource = bookingList;
-                GridViewBookings.DataBind();
+                if (!bookingList.Any())
+                {
+                    LabelBookingError.Text = "No bookings found!";
+                    LabelBookingError.Visible = true;
+
+                    GridViewBookings.Visible = false;
+                }
+                else
+                {
+                    LabelBookingError.Visible = false;
+
+                    GridViewBookings.Visible = true;
+                    GridViewBookings.DataSource = bookingList;
+                    GridViewBookings.DataBind();
+                }                
             }
         }
 

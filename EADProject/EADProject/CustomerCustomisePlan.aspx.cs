@@ -82,22 +82,53 @@ namespace EADProject
 
         protected void ButtonContinue_Click(object sender, EventArgs e)
         {
-            string dateBooked = DateTime.Now.ToString("dddd, dd MMMM yyyy");
-            string name = LabelPlanName.Text;
-            string duration = LabelDuration.Text;
-            string startDate = LabelStartDate.Text;
-            string endDate = LabelEndDate.Text;
-            string price = LabelPrice.Text;
-            string location1 = DropDownListFirst.SelectedItem.Text;
-            string location2 = DropDownListSecond.SelectedItem.Text;
-            string location3 = DropDownListThird.SelectedItem.Text;
+            bool error = false;
 
-            BookingDetails bd = new BookingDetails(dateBooked, name, duration, startDate, endDate, price, location1, location2, location3);
-            int result = bd.InsertBooking();
+            LabelLocationError.Visible = false;
 
-            if (result == 1)
+            if (LabelStartDate.Text == "Error! Invalid start date.")
             {
-                Response.Redirect("Details.aspx");
+                error = true;
+            }
+
+            if (DropDownListFirst.SelectedValue == "-1" ||
+                DropDownListSecond.SelectedValue == "-1" ||
+                DropDownListThird.SelectedValue == "-1")
+            {
+                error = true;
+
+                LabelLocationError.Text = "Location not selected!";
+                LabelLocationError.Visible = true;
+            }
+            else if (DropDownListFirst.SelectedValue == DropDownListSecond.SelectedValue ||
+                DropDownListFirst.SelectedValue == DropDownListThird.SelectedValue ||
+                DropDownListSecond.SelectedValue == DropDownListThird.SelectedValue)
+            {
+                error = true;
+
+                LabelLocationError.Text = "Locations are the same!";
+                LabelLocationError.Visible = true;
+            }
+
+            if (!error)
+            {
+                string dateBooked = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+                string name = LabelPlanName.Text;
+                string duration = LabelDuration.Text;
+                string startDate = LabelStartDate.Text;
+                string endDate = LabelEndDate.Text;
+                string price = LabelPrice.Text;
+                string location1 = DropDownListFirst.SelectedItem.Text;
+                string location2 = DropDownListSecond.SelectedItem.Text;
+                string location3 = DropDownListThird.SelectedItem.Text;
+
+                BookingDetails bd = new BookingDetails(dateBooked, name, duration, startDate, endDate, price, location1, location2, location3);
+                int result = bd.InsertBooking();
+
+                if (result == 1)
+                {
+                    Response.Redirect("Details.aspx");
+                }
             }
         }
     }

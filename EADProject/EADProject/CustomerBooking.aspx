@@ -46,6 +46,8 @@
                     </Columns>
                 </asp:GridView>
             </div>
+            <asp:Label ID="LabelBookingError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
         </div>
+        <br />
     </form>
 </asp:Content>
