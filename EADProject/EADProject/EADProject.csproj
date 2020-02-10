@@ -76,6 +76,10 @@
     <Content Include="App_Data\EADP_DB_log.ldf">
       <DependentUpon>EADP_DB.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Account.mdf" />
+    <Content Include="App_Data\Account_log.ldf">
+      <DependentUpon>Account.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -161,8 +165,10 @@
       <DependentUpon>Cust_Review.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\RegisterDAO.cs" />
+    <Compile Include="DAL\RegisterTourDAO.cs" />
     <Compile Include="DAL\ReviewDAO.cs" />
     <Compile Include="DAL\C_DetailsDAO.cs" />
+    <Compile Include="DAL\LoginDAO.cs" />
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

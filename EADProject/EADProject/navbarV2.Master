@@ -58,7 +58,7 @@
                     Account
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarAccount">
-                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="UpdateParticulars.aspx">Profile</a>
                     <a class="dropdown-item" href="P_Details.aspx">Payment Details</a>
                 </div>
             </li>
@@ -89,7 +89,7 @@
                 </a>
                 <%--<div class="dropdown-menu" aria-labelledby="navbarLoginRegister">
                     <a class="dropdown-item" href="Login.aspx">Login</a>
-                    <a class="dropdown-item" href="#">Register</a>
+                    <a class="dropdown-item" href="Register.aspx">Register</a>
                 </div>--%>
             <%--</li>--%>
         </ul>

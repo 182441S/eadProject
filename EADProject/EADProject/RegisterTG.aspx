@@ -27,7 +27,7 @@
                         <h2 class="text-white" style="text-align: center; font-size: 45px;"> Be a Tour Guide </h2>
                     </div>
 
-                    <form class="mt-4">
+                    <form class="mt-4" runat="server">
                         <div class="row">
                             <div class="form-group col-5">
                                 <label class="text-white"> Name: </label>
@@ -74,7 +74,10 @@
                         </div>
 
                         <div class="mt-5">
-                          <asp:Button ID="registerbtn" runat="server" CssClass="btn btn-light col" OnClick="registerbtn_Click" />
+                          <asp:Button ID="registerbtn" runat="server" CssClass="btn btn-light col" text="Register" OnClick="registerbtn_Click">
+<%--                              <a href="TGParticulars.aspx"></a>--%>
+                          </asp:Button>
+                            
                            
                         </div>
 

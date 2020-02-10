@@ -23,6 +23,7 @@ namespace EADProject
             Tour d = new Tour();
             int result = d.AddCustomer(tbName.Text, Convert.ToDateTime(tbDob.Text), Convert.ToInt32(tbPhone.Text), tbEmail.Text, tbPassword.Text);
 
+            Response.Redirect("TGParticulars.aspx");
         }
     }
 }

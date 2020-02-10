@@ -55,6 +55,10 @@
                                 Don't have an account?
                                 <a href="RegisterTG.aspx" class="text-warning">Click here to register</a>
                             </p>
+                            <p class="text-white text-center">
+                                Here as a Customer?
+                                <a href="Login.aspx" class="text-warning"> Log in Here! </a>
+                            </p>
                         </div>
                     </form>
                 </div>
