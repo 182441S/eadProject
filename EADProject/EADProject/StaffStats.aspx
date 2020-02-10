@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        &nbsp;<asp:Chart ID="Chart1" runat="server" BorderlineColor="Black" Height="500px" Width="100%">
+        &nbsp;<asp:Chart ID="Chart1" runat="server" BorderlineColor="Black" Height="500px" Width="1050px">
             <Series>
                 <asp:Series Name="SeriesStats" ChartArea="ChartArea1">
                 </asp:Series>
