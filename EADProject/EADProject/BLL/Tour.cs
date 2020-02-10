@@ -28,10 +28,16 @@ namespace EADProject.BLL
         {
 
         }
-       
+
+        public Tour(string name, string password)
+        {
+            Name = name;
+            Password = password;
+        }
+
         public int AddCustomer(string name, DateTime dob, int phone, string email, string password)
         {
-            RegisterDAO dao = new RegisterDAO();
+            RegisterTourDAO dao = new RegisterTourDAO();
             int result = dao.Insert(name, dob, phone, email, password);
             return result;
         }

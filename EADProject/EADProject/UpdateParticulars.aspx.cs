@@ -13,5 +13,10 @@ namespace EADProject
         {
 
         }
+
+        protected void Updatebtn_click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,12 @@ namespace EADProject.BLL
 
         }
 
+        public Cust(string name, string password)
+        {
+            Name = name;
+            Password = password;
+        }
+
         public int AddCustomer(string name,DateTime dob,int phone,string email,string password)
         {
             RegisterDAO dao = new RegisterDAO();
@@ -35,10 +41,17 @@ namespace EADProject.BLL
             return result;
         }
 
-        //public Customer VerifyByID(string name, string password)
+        public Cust VerifyByID(string email, string password)
+        {
+            LoginDAO dao = new LoginDAO();
+            return dao.Verify(email, password);
+        }
+
+        //public Cust Update(string name, DateTime dob, int phone, string password)
         //{
         //    RegisterDAO dao = new RegisterDAO();
-        //    return dao.Verify(name, password);
+        //    int result = dao.Update(name, dob, phone, password);
+        //    return result;
         //}
     }
 }

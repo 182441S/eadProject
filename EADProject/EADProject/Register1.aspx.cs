@@ -49,17 +49,11 @@ namespace EADProject
         //    MessageBox.Show(Message);
         //}
 
-        protected void registerbttn_ServerClick(object sender, EventArgs e)
-        {
-            Cust d = new Cust();
-            int result = d.AddCustomer(tbname.Text.ToString(), Convert.ToDateTime(tbdob.Text), Convert.ToInt32(tbPhone.Text), tbEmail.Text, tbPassword.Text);
-            //if (Cust.)
-        }
 
         protected void registerbtn_Click(object sender, EventArgs e)
         {
             Cust d = new Cust();
-            int result = d.AddCustomer(tbname.Text.ToString(), Convert.ToDateTime(tbdob.Text), Convert.ToInt32(tbPhone.Text), tbEmail.Text, tbPassword.Text);
+            int result = d.AddCustomer(tbname.Text, Convert.ToDateTime(tbdob.Text), Convert.ToInt32(tbPhone.Text), tbEmail.Text, tbPassword.Text);
 
         }
     }

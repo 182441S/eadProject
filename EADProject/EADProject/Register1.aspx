@@ -87,7 +87,7 @@
                         </div>
 
                         <div class="mt-5">
-                            <asp:Button ID="registerbtn" runat="server" CssClass="btn btn-light col" OnClick="registerbtn_Click" />
+                            <asp:Button ID="registerbtn" runat="server" CssClass="btn btn-light col" text="Register" OnClick="registerbtn_Click" />
                            
                         </div>
 
