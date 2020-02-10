@@ -257,5 +257,64 @@ namespace EADProject.DAL
 
             return listTotalSales;
         }
+
+        public List<int> RetrieveSalesByStart(List<string> list)
+        {
+            List<int> listSalesByDay = new List<int>();
+
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                string sqlStmt = "SELECT COUNT(*) AS NumRows FROM BookingDetails WHERE StartDate LIKE @paraDay";
+
+                SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+                sqlCmd.Parameters.AddWithValue("@paraDay", "%" + list[i] + "%");
+
+                myConn.Open();
+
+                SqlDataReader dr = sqlCmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    listSalesByDay.Add(int.Parse(dr["NumRows"].ToString()));
+                }
+
+                myConn.Close();
+            }
+
+
+            return listSalesByDay;
+        }
+
+        public List<int> RetrieveSalesByEnd(List<string> list)
+        {
+            List<int> listSalesByEndDay = new List<int>();
+
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                string sqlStmt = "SELECT COUNT(*) AS NumRows FROM BookingDetails WHERE EndDate LIKE @paraDay";
+
+                SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+                sqlCmd.Parameters.AddWithValue("@paraDay", "%" + list[i] + "%");
+
+                myConn.Open();
+
+                SqlDataReader dr = sqlCmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    listSalesByEndDay.Add(int.Parse(dr["NumRows"].ToString()));
+                }
+
+                myConn.Close();
+            }
+
+            return listSalesByEndDay;
+        }
     }
 }

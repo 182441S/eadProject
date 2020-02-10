@@ -52,6 +52,36 @@ namespace EADProject
             }
         }
 
+        protected void SalesByStartDate()
+        {
+            BookingDetails bd = new BookingDetails();
+
+            List<string> listDays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            List<int> salesByDay = bd.GetSalesByStart(listDays);
+
+            Series series = Chart1.Series["SeriesStats"];
+
+            for (int i = 0; i < listDays.Count; i++)
+            {
+                series.Points.AddXY(listDays[i], salesByDay[i]);
+            }
+        }
+
+        protected void SalesByEndDate()
+        {
+            BookingDetails bd = new BookingDetails();
+
+            List<string> listDays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            List<int> salesByEndDay = bd.GetSalesByEnd(listDays);
+
+            Series series = Chart1.Series["SeriesStats"];
+
+            for (int i = 0; i < listDays.Count; i++)
+            {
+                series.Points.AddXY(listDays[i], salesByEndDay[i]);
+            }
+        }
+
         protected void DropDownListVariable_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (DropDownListVariable.SelectedValue == "Total Plan Sales")
@@ -65,6 +95,18 @@ namespace EADProject
                 Chart1.Series["SeriesStats"].Points.Clear();
 
                 TotalPlanSales();
+            }
+            else if (DropDownListVariable.SelectedValue == "Sales by Start Day")
+            {
+                Chart1.Series["SeriesStats"].Points.Clear();
+
+                SalesByStartDate();
+            }
+            else if (DropDownListVariable.SelectedValue == "Sales by End Day")
+            {
+                Chart1.Series["SeriesStats"].Points.Clear();
+
+                SalesByEndDate();
             }
         }
     }

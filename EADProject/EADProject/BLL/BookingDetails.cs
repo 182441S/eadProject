@@ -95,5 +95,17 @@ namespace EADProject.BLL
             BookingDetailsDAO dao = new BookingDetailsDAO();
             return dao.RetrieveSalesByYear(list);
         }
+
+        public List<int> GetSalesByStart(List<string> list)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+            return dao.RetrieveSalesByStart(list);
+        }
+
+        public List<int> GetSalesByEnd(List<string> list)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+            return dao.RetrieveSalesByEnd(list);
+        }
     }
 }
