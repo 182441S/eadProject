@@ -20,9 +20,9 @@
                 </div>
             </div>
         </div>
-        &nbsp;<asp:Chart ID="Chart1" runat="server">
+        &nbsp;<asp:Chart ID="Chart1" runat="server" BorderlineColor="Black" Height="500px" Width="100%">
             <Series>
-                <asp:Series Name="SeriesStats">
+                <asp:Series Name="SeriesStats" ChartArea="ChartArea1">
                 </asp:Series>
             </Series>
             <ChartAreas>

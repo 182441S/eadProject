@@ -217,13 +217,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Guide_Review.aspx.cs">
-      <DependentUpon>Guide_Review.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Guide_Review.aspx.designer.cs">
-      <DependentUpon>Guide_Review.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -287,13 +280,6 @@
     </Compile>
     <Compile Include="StaffEditPlan.aspx.designer.cs">
       <DependentUpon>StaffEditPlan.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="StaffGuide.aspx.cs">
-      <DependentUpon>StaffGuide.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StaffGuide.aspx.designer.cs">
-      <DependentUpon>StaffGuide.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffPlan.aspx.cs">
       <DependentUpon>StaffPlan.aspx</DependentUpon>
