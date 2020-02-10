@@ -22,7 +22,7 @@
         </div>
         &nbsp;<asp:Chart ID="Chart1" runat="server">
             <Series>
-                <asp:Series Name="Series1">
+                <asp:Series Name="SeriesStats">
                 </asp:Series>
             </Series>
             <ChartAreas>
@@ -33,7 +33,7 @@
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        &nbsp;<asp:DropDownList ID="DropDownListVariable" runat="server" AutoPostBack="True" CssClass="bootstrap class form-control">
+        &nbsp;<asp:DropDownList ID="DropDownListVariable" runat="server" AutoPostBack="True" CssClass="bootstrap class form-control" OnSelectedIndexChanged="DropDownListVariable_SelectedIndexChanged">
             <asp:ListItem Selected="True">Total Plan Sales</asp:ListItem>
             <asp:ListItem>Individual Plan Sales</asp:ListItem>
             <asp:ListItem>Number of Bookings</asp:ListItem>

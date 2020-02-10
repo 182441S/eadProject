@@ -83,5 +83,17 @@ namespace EADProject.BLL
 
             return dao.RetrieveByEndDate(editedText);
         }
+
+        public List<int> GetPlanSales(List<string> list)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+            return dao.RetrievePlanSales(list);
+        }
+
+        public List<int> GetTotalSales(List<string> list)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+            return dao.RetrieveSalesByYear(list);
+        }
     }
 }

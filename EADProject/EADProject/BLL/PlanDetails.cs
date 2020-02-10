@@ -49,5 +49,11 @@ namespace EADProject.BLL
             PlanDetailsDAO dao = new PlanDetailsDAO();
             return dao.UpdatePlanDetails(name, loc1, loc2, loc3, price, duration, desc);
         }
+
+        public List<string> GetPlanNames()
+        {
+            PlanDetailsDAO dao = new PlanDetailsDAO();
+            return dao.GetPlanNames();
+        }
     }
 }

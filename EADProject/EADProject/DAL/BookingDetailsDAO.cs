@@ -199,5 +199,63 @@ namespace EADProject.DAL
 
             return list;
         }
+
+        public List<int> RetrievePlanSales(List<string> list)
+        {
+            List<int> listSales = new List<int>();
+
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                string sqlStmt = "SELECT COUNT(*) AS NumRows FROM BookingDetails WHERE Name = @paraName";
+
+                SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+                sqlCmd.Parameters.AddWithValue("@paraName", list[i]);
+
+                myConn.Open();
+
+                SqlDataReader dr = sqlCmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    listSales.Add(int.Parse(dr["NumRows"].ToString()));
+                }
+
+                myConn.Close();
+            }
+
+            return listSales;
+        }
+
+        public List<int> RetrieveSalesByYear(List<string> list)
+        {
+            List<int> listTotalSales = new List<int>();
+
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                string sqlStmt = "SELECT COUNT(*) AS NumRows FROM BookingDetails WHERE DateBooked LIKE @paraYear";
+
+                SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+                sqlCmd.Parameters.AddWithValue("@paraYear", "%" + list[i] + "%");
+
+                myConn.Open();
+
+                SqlDataReader dr = sqlCmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    listTotalSales.Add(int.Parse(dr["NumRows"].ToString()));
+                }
+
+                myConn.Close();
+            }
+
+            return listTotalSales;
+        }
     }
 }
