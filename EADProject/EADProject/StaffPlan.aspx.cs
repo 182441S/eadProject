@@ -27,11 +27,6 @@ namespace EADProject
             Response.Redirect("StaffEditPlan.aspx");
         }
 
-        protected void deletePlan_ServerClick(object sender, EventArgs e)
-        {
-
-        }
-
         protected void editPlan_ServerClick(object sender, EventArgs e)
         {
             HtmlButton btn = (HtmlButton)sender;

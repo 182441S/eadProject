@@ -40,6 +40,15 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.TextBox TextBoxPlanName;
         
         /// <summary>
+        /// LabelNameError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelNameError;
+        
+        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.DropDownList DropDownListLocThird;
         
         /// <summary>
+        /// LabelLocationError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelLocationError;
+        
+        /// <summary>
         /// Label8 control.
         /// </summary>
         /// <remarks>
@@ -110,6 +128,15 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxPrice;
+        
+        /// <summary>
+        /// LabelPriceError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelPriceError;
         
         /// <summary>
         /// Label9 control.
@@ -130,6 +157,15 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.TextBox TextBoxDuration;
         
         /// <summary>
+        /// LabelDurationError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDurationError;
+        
+        /// <summary>
         /// Label7 control.
         /// </summary>
         /// <remarks>
@@ -146,6 +182,15 @@ namespace EADProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxDescription;
+        
+        /// <summary>
+        /// LabelDescError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDescError;
         
         /// <summary>
         /// ButtonSave control.
