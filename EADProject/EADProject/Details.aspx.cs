@@ -16,7 +16,7 @@ namespace EADProject
 
             if(result == 1)
             {
-                Response.Redirect("CustomerBooking.aspx");
+                Response.Redirect("CustomerPlan.aspx");
             }
         }
     }
