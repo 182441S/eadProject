@@ -22,6 +22,8 @@ namespace EADProject
                 GridViewBookings.Visible = true;
                 GridViewBookings.DataSource = bookingList;
                 GridViewBookings.DataBind();
+
+                Session["Colour"] = GridViewBookings.HeaderRow.Cells[0].BackColor;
             }
         }
 
@@ -140,6 +142,43 @@ namespace EADProject
             if (DropDownListParam.SelectedValue == "None")
             {
                 TextBoxSearch.Text = "";
+
+                GridViewBookings.HeaderRow.Cells[0].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[1].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[3].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[4].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+            }
+            else if (DropDownListParam.SelectedValue == "Date Booked")
+            {
+                GridViewBookings.HeaderRow.Cells[0].BackColor = System.Drawing.Color.Cyan;
+                
+                GridViewBookings.HeaderRow.Cells[1].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[3].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[4].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+            }
+            else if (DropDownListParam.SelectedValue == "Plan Name")
+            {
+                GridViewBookings.HeaderRow.Cells[1].BackColor = System.Drawing.Color.Cyan;
+
+                GridViewBookings.HeaderRow.Cells[0].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[3].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[4].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+            }
+            else if (DropDownListParam.SelectedValue == "Start Date")
+            {
+                GridViewBookings.HeaderRow.Cells[3].BackColor = System.Drawing.Color.Cyan;
+
+                GridViewBookings.HeaderRow.Cells[0].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[1].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[4].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+            }
+            else if (DropDownListParam.SelectedValue == "End Date")
+            {
+                GridViewBookings.HeaderRow.Cells[4].BackColor = System.Drawing.Color.Cyan;
+
+                GridViewBookings.HeaderRow.Cells[0].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[1].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
+                GridViewBookings.HeaderRow.Cells[3].BackColor = System.Drawing.Color.FromName(Session["Colour"].ToString());
             }
         }
     }
