@@ -5,19 +5,19 @@
     <form id="form1" runat="server">
     <link href="StyleSheets/PaymentSimulation.css" rel="stylesheet" />
 
-            <asp:DataList ID="DL1" DataSourceID="DBLink" runat="server" RepeatColumns="3" RepeatDirection="horizontal" CssClass="col-sm-12 col-md-12 col-lg-12">
+            <asp:DataList ID="DL1" DataSourceID="DBLink"  runat="server" RepeatColumns="3" RepeatDirection="horizontal" CssClass="col-sm-12 col-md-12 col-lg-12">
         <ItemTemplate>
-        <div class="row">
-            <div class="flip-card">
-                    <div class="flip-card-inner">
+        <div class="row" id="1">
+            <div class="flip-card" id="2">
+                    <div class="flip-card-inner" id="3">
                         <div class="flip-card-front">
-                            <img src="Images/JackJonesAvatar.png" style="width: 90px;" />
+                            <asp:Image runat="server" ID="imagepic" style="width: 90px;" />
                             <h1><%# Eval("Name") %></h1>
                         </div>
-                        <div class="flip-card-back">
+                        <div class="flip-card-back" id="4">
                             <p>
                                 <asp:Label ID="nricstring" runat="server" >NRIC: </asp:Label>
-                                <asp:Label ID="nriclbl" runat="server" ><%# Eval("nric") %></asp:Label>
+                                <asp:Label ID="nriclbl" runat="server" Text='<%# Eval("nric") %>' ></asp:Label>
                             </p>
                             
                             
@@ -36,9 +36,11 @@
                                 <asp:Label ID="Ratinglb" runat="server" ><%# Eval("Rating") %>/10</asp:Label>
                             </p>
                             <p>
-                                <asp:Button ID="Button1" class="Bonus" data-toggle="modal" data-target="#exampleModal" runat="server"  OnClientClick="return false;" Text="Assign Bonus" />
+                          <button id="Bonus" class="Bonus" runat="server" Name='<%# Eval("Name") %>' Nric='<%# Eval("nric") %>' Phone='<%# Eval("Phone") %>' Email='<%# Eval("Email") %>' Salary='<%# Eval("Salary") %>' onserverclick="Button1_ServerClick">Assign Bonus</button>
+
+                             
                             </p>
-                            <a class="statlink" href="#">More Detailed Statistics -></a>
+<%--                            <a class="statlink" href="#">More Detailed Statistics -></a>--%>
 
                         </div>
                     </div>
@@ -233,7 +235,7 @@
 
        
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <%--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -276,11 +278,11 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button id="saveBTTN" class="btn btn-primary" data-dismiss="modal" runat="server" onserverclick="saveBTTN_ServerClick" >Save changes</button>
+                        <button id="saveBTTN" class="btn btn-primary" data-dismiss="modal" runat="server"  >Save changes</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
             
 
 

@@ -17,33 +17,27 @@
         <button class="tablink" onclick="openPage('History', this, 'darkslategrey')">History</button>
 
         <div id="History" class="tabcontent">
+            <asp:DataList DataSourceID="DB" runat="server" RepeatColumns="1" RepeatDirection="Vertical" CssClass="col-sm-12 col-md-12 col-lg-12">
+                <ItemTemplate>
 
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="container">
-                        <img src="Images/ResortsWorldSentosa.jpg" style="width: 100px" />
-                        <p><span>Resorts World Sentosa</span></p>
-                        <br />
-                        <p>Date of job:12-1-2017</p>
-                        <p>Start time:10:00 AM</p>
-                        <p>Time completed:3:00 PM</p>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="container">
+                                <img src="Images/ResortsWorldSentosa.jpg" style="width: 100px" />
+                                <p><span><%# Eval("Name") %></span></p>
+                                <br />
+                                <p>Date of job:<%# Eval("Date") %></p>
+                                <p>Start time:<%# Eval("Starttime") %></p>
+                                <p>Time completed:<%# Eval("Endtime") %></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <br>
+                    </ItemTemplate>
+
+                    </asp:DataList>
+                          <asp:SqlDataSource ID="DB" runat="server" ConnectionString="<%$ ConnectionStrings:ConnStr%>" SelectCommand="SELECT * FROM [Jobhistory]"></asp:SqlDataSource>
             </div>
-            <br>
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="container">
-                        <img src="Images/VictoriaConcertHall.jpg" style="width: 90px" />
-                        <p><span>Victoria Concert Hall</span></p>
-                        <br />
-                        <p>Date of job:3-3-2017</p>
-                        <p>Start time:10:00 AM</p>
-                        <p>Time completed:4:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div id="Current" class="tabcontent">
             <div class="container">

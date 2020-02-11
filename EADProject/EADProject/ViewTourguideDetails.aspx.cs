@@ -12,18 +12,33 @@ namespace EADProject
     {
 
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            namestring.Visible = false;
+            nricstring.Visible = false;
+            Label12.Visible = false;
+            Label3.Visible = false;
+            Label4.Visible = false;
+            Label5.Visible = false;
+            Label6.Visible = false;
         }
 
         protected void SearchBttn_Click(object sender, EventArgs e)
         {
             string nric = TGSearchTB.Text;
             TourGuide details = new TourGuide();
+
                 details = details.SelectTourGuideByID(nric);
             if (details != null)
             {
+                namestring.Visible = true;
+                nricstring.Visible = true;
+                Label12.Visible = true;
+                Label3.Visible = true;
+                Label4.Visible = true;
+                Label5.Visible = true;
+                Label6.Visible = true;
 
                 error2.Visible = false;
                 nameLBL.Text = details.Name.ToString();
@@ -33,6 +48,7 @@ namespace EADProject
                 emailLBL.Text = details.EMAIL.ToString();
                 phoneLBL.Text = details.PHONE.ToString();
                 dateregisteredLBL.Text = details.DATEREGISTERED.ToString();
+                Image1.ImageUrl = "data:Image/png;base64," + details.PIC;
             }
             else
             {
