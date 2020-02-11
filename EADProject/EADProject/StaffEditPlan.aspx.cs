@@ -84,7 +84,15 @@ namespace EADProject
             {
                 try
                 {
-                    int.Parse(TextBoxPrice.Text);
+                    int i = int.Parse(TextBoxPrice.Text);
+
+                    if (i == 0)
+                    {
+                        error = true;
+
+                        LabelPriceError.Text = "Price cannot be 0!";
+                        LabelPriceError.Visible = true;
+                    }
                 }
                 catch
                 {
@@ -106,7 +114,15 @@ namespace EADProject
             {
                 try
                 {
-                    int.Parse(TextBoxDuration.Text);
+                    int i = int.Parse(TextBoxDuration.Text);
+
+                    if (i == 0)
+                    {
+                        error = true;
+
+                        LabelDurationError.Text = "Duration cannot be 0!";
+                        LabelDurationError.Visible = true;
+                    }
                 }
                 catch
                 {
