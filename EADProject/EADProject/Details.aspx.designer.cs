@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EADProject
-{
-
-
-    public partial class Details
-    {
-
+namespace EADProject {
+    
+    
+    public partial class Details {
+        
         /// <summary>
         /// name control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace EADProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox name;
-
+        
         /// <summary>
         /// passNo control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace EADProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passNo;
-
+        
         /// <summary>
         /// email control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace EADProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox email;
-
+        
         /// <summary>
         /// mobileNo control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace EADProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox mobileNo;
-
+        
         /// <summary>
         /// cardNo control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace EADProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox cardNo;
-
+        
         /// <summary>
         /// month control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace EADProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox month;
-
+        
         /// <summary>
         /// year control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace EADProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox year;
-
+        
         /// <summary>
         /// ccv control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace EADProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ccv;
-
+        
         /// <summary>
         /// submit control.
         /// </summary>

@@ -9,19 +9,20 @@
 
     <form runat="server">
 
+
         <fieldset>
             <div class="form-group row">
                 <div class="col-md-1 col-sm-1 col-lg-1">
                 </div>
                 <div class="col-md-3 col-sm-3 col-lg-3">
                     <label>Name: </label>
-                    <asp:TextBox runat="server" ID="name" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="name" CssClass="form-control" placeholder="Ryan Chew"/>
                 </div>
                 <div class="col-md-2 col-sm-2 col-lg-2">
                 </div>
                 <div class="col-md-3 col-sm-3 col-lg-3">
                     <label>Passport No.: </label>
-                    <asp:TextBox runat="server" ID="passNo" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="passNo" CssClass="form-control" MaxLength="9" placeholder="S1111111A"/>
                 </div>
             </div>
 
@@ -30,13 +31,13 @@
                 </div>
                 <div class="col-md-3 col-sm-3 col-lg-3">
                     <label>Email: </label>
-                    <asp:TextBox runat="server" ID="email" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="email" CssClass="form-control" placeholder="example@gmail.com" />
                 </div>
                 <div class="col-md-2 col-sm-2 col-lg-2">
                 </div>
                 <div class="col-md-3 col-sm-3 col-lg-3">
                     <label>Mobile: </label>
-                    <asp:TextBox runat="server" ID="mobileNo" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="mobileNo" CssClass="form-control" placeholder="(+065) 8111 6823" ToolTip="You only need to input numbers, if your area code is 2 digits, please start off with a '0'." />
                 </div>
             </div>
 
@@ -46,7 +47,7 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-lg-4">
                     <label>Card No.: </label>
-                    <asp:TextBox runat="server" ID="cardNo" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="cardNo" CssClass="form-control" placeholder="0000 0000 0000 0000" />
                 </div>
             </div>
 
@@ -73,7 +74,7 @@
                 </div>
                 <div class="col-md-5 col-sm-5 col-lg-5">
                     <label>Name as on card:</label>
-                    <input type="text" id="cardName" class="form-control" />
+                    <input type="text" id="cardName" class="form-control" placeholder="Ryan Chew" />
                 </div>
             </div>
 
