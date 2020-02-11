@@ -16,10 +16,11 @@ namespace EADProject.BLL
         public int PHONE { get; set; }
         public string DATEREGISTERED { get; set; }
         public int SALARY { get; set; }
+        public string PIC { get; set; }
         
         
 
-        public TourGuide(string nric,string name,string gender,string dob,string email,int phone, string dateregistered,int salary)
+        public TourGuide(string nric,string name,string gender,string dob,string email,int phone, string dateregistered,int salary,string pic)
         {
             NRIC = nric;
             Name = name;
@@ -29,6 +30,7 @@ namespace EADProject.BLL
             PHONE = phone;
             DATEREGISTERED = dateregistered;
             SALARY = salary;
+            PIC = pic;
         }
        
         public TourGuide()
@@ -42,10 +44,10 @@ namespace EADProject.BLL
             return dao.RetrieveTGDetailsbyID(nric);
         }
 
-        public int InsertTest(int bonus,string comments)
+        public int InsertTest(int bonus,string comments,string nric)
         {
             ViewtourguideDetailsDAO dao = new ViewtourguideDetailsDAO();
-            int result = dao.Insertbonus(bonus,comments);
+            int result = dao.Insertbonus(bonus,comments ,nric);
             return result;
         }
 

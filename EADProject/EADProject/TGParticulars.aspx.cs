@@ -19,5 +19,10 @@ namespace EADProject
             PastJob.TextMode = TextBoxMode.MultiLine;
             PastJob.Rows = 10;
         }
+
+        protected void submitclick(object sender, EventArgs e)
+        {
+            Response.Redirect("LoginTG.aspx");
+        }
     }
 }

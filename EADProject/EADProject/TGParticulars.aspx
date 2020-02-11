@@ -244,7 +244,7 @@
                         </div>
                     </div>
                     <br />
-                    <button> Submit </button>
+                    <asp:Button runat="server" Text="Submit" OnClick="submitclick" />
                 </form>
             </div>
         </div>

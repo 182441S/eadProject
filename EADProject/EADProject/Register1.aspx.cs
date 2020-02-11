@@ -55,6 +55,7 @@ namespace EADProject
             Cust d = new Cust();
             int result = d.AddCustomer(tbname.Text, Convert.ToDateTime(tbdob.Text), Convert.ToInt32(tbPhone.Text), tbEmail.Text, tbPassword.Text);
 
+            Response.Redirect("Login.aspx");
         }
     }
 }

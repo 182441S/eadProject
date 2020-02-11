@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace EADProject
@@ -18,25 +19,31 @@ namespace EADProject
 
         
 
-        protected void saveBTTN_ServerClick(object sender, EventArgs e)
+        
+
+        protected void Button1_ServerClick(object sender, EventArgs e)
         {
             TourGuide ist = new TourGuide();
+            HtmlButton btn = (HtmlButton)sender;
+            string name = btn.Attributes["Name"];
+            string nric = btn.Attributes["Nric"];
+            int phone =Convert.ToInt32(btn.Attributes["Phone"]);
+            string email = btn.Attributes["Email"];
+            int salary = Convert.ToInt32(btn.Attributes["Salary"]);
 
 
-            HttpPostedFile postedfile = FileUpload1.PostedFile;
-            Stream stream = postedfile.InputStream;
-            BinaryReader binaryReader = new BinaryReader(stream);
-            byte[] bytes =binaryReader.ReadBytes((int)stream.Length);
-            string nric = "S1234567A";
-            int picresult = ist.InsertProfilePic(bytes,nric);
+            Session["NAME"]= name;
+            Session["NRIC"]= nric;
+            Session["PHONE"]= phone;
+            Session["EMAIL"]= email;
+            Session["SALARY"]= salary;
+
+            Response.Redirect("assignBonus.aspx");
+
+            int re = ist.Update(Convert.ToInt32("9787978"), nric);
 
 
-            int re = ist.Update(Convert.ToInt32(salarytb.Text),"S1234567A");
 
-            if (bonusamttb.Text != "")
-            {
-                int result = ist.InsertTest(Convert.ToInt32(bonusamttb.Text), Commentstb.Text);
-            }
         }
     }
 }
