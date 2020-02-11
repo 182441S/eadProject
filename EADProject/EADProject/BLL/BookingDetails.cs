@@ -47,5 +47,65 @@ namespace EADProject.BLL
             BookingDetailsDAO dao = new BookingDetailsDAO();
             return dao.RetrieveAll();
         }
+
+        public List<BookingDetails> GetBookingsByName(string text)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+
+            string editedText = "%" + text + "%";
+
+            return dao.RetrieveByName(editedText);
+        }
+
+        public List<BookingDetails> GetBookingsByDate(string text)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+
+            string editedText = "%" + text + "%";
+
+            return dao.RetrieveByDate(editedText);
+        }
+
+        public List<BookingDetails> GetBookingsByStartDate(string text)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+
+            string editedText = "%" + text + "%";
+
+            return dao.RetrieveByStartDate(editedText);
+        }
+
+        public List<BookingDetails> GetBookingsByEndDate(string text)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+
+            string editedText = "%" + text + "%";
+
+            return dao.RetrieveByEndDate(editedText);
+        }
+
+        public List<int> GetPlanSales(List<string> list)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+            return dao.RetrievePlanSales(list);
+        }
+
+        public List<int> GetTotalSales(List<string> list)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+            return dao.RetrieveSalesByYear(list);
+        }
+
+        public List<int> GetSalesByStart(List<string> list)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+            return dao.RetrieveSalesByStart(list);
+        }
+
+        public List<int> GetSalesByEnd(List<string> list)
+        {
+            BookingDetailsDAO dao = new BookingDetailsDAO();
+            return dao.RetrieveSalesByEnd(list);
+        }
     }
 }

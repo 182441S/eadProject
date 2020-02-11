@@ -42,6 +42,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="TextBoxPlanName" runat="server" MaxLength="100" Width="170px" CssClass="bootstrap class form-control"></asp:TextBox>
+                    <asp:Label ID="LabelNameError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -49,7 +50,17 @@
                     <asp:Label ID="Label4" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Location 1:"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBoxLocation1Name" runat="server" MaxLength="100" Width="260px" CssClass="bootstrap class form-control"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownListLocFirst" runat="server" Width="265px" CssClass="bootstrap class form-control">
+                        <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
+                        <asp:ListItem>Fort Canning Park</asp:ListItem>
+                        <asp:ListItem>Victoria Opera House</asp:ListItem>
+                        <asp:ListItem>Universal Studios Sentosa</asp:ListItem>
+                        <asp:ListItem>Resorts World Sentosa</asp:ListItem>
+                        <asp:ListItem>Singapore National Museum</asp:ListItem>
+                        <asp:ListItem>Singapore Flyer</asp:ListItem>
+                        <asp:ListItem>Marina Bay Sands</asp:ListItem>
+                        <asp:ListItem>Gardens by the Bay</asp:ListItem>
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
@@ -57,7 +68,17 @@
                     <asp:Label ID="Label5" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Location 2:"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBoxLocation2Name" runat="server" MaxLength="100" Width="260px" CssClass="bootstrap class form-control"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownListLocSecond" runat="server" Width="265px" CssClass="bootstrap class form-control">
+                        <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
+                        <asp:ListItem>Fort Canning Park</asp:ListItem>
+                        <asp:ListItem>Victoria Opera House</asp:ListItem>
+                        <asp:ListItem>Universal Studios Sentosa</asp:ListItem>
+                        <asp:ListItem>Resorts World Sentosa</asp:ListItem>
+                        <asp:ListItem>Singapore National Museum</asp:ListItem>
+                        <asp:ListItem>Singapore Flyer</asp:ListItem>
+                        <asp:ListItem>Marina Bay Sands</asp:ListItem>
+                        <asp:ListItem>Gardens by the Bay</asp:ListItem>
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
@@ -65,7 +86,18 @@
                     <asp:Label ID="Label6" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Location 3:"></asp:Label>
                 </td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="TextBoxLocation3Name" runat="server" MaxLength="100" Width="260px" CssClass="bootstrap class form-control"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownListLocThird" runat="server" Width="265px" CssClass="bootstrap class form-control">
+                        <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
+                        <asp:ListItem>Fort Canning Park</asp:ListItem>
+                        <asp:ListItem>Victoria Opera House</asp:ListItem>
+                        <asp:ListItem>Universal Studios Sentosa</asp:ListItem>
+                        <asp:ListItem>Resorts World Sentosa</asp:ListItem>
+                        <asp:ListItem>Singapore National Museum</asp:ListItem>
+                        <asp:ListItem>Singapore Flyer</asp:ListItem>
+                        <asp:ListItem>Marina Bay Sands</asp:ListItem>
+                        <asp:ListItem>Gardens by the Bay</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:Label ID="LabelLocationError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -74,6 +106,7 @@
                 </td>
                 <td class="auto-style2">
                     <asp:TextBox ID="TextBoxPrice" runat="server" MaxLength="4" Width="130px" CssClass="bootstrap class form-control"></asp:TextBox>
+                    <asp:Label ID="LabelPriceError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -82,6 +115,7 @@
                 </td>
                 <td class="auto-style2">
                     <asp:TextBox ID="TextBoxDuration" runat="server" MaxLength="1" Width="50px" CssClass="bootstrap class form-control"></asp:TextBox>
+                    <asp:Label ID="LabelDurationError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -90,6 +124,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="TextBoxDescription" runat="server" Width="450px" CssClass="bootstrap class form-control" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                    <asp:Label ID="LabelDescError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
                 </td>
             </tr>
             <tr>

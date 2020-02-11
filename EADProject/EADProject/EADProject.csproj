@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\justx\OneDrive\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
@@ -83,6 +87,10 @@
     <Content Include="StyleSheets\jobListing.css" />
     <Content Include="StyleSheets\PaymentSimulation.css" />
     <Content Include="ViewTourguideDetails.aspx" />
+    <Content Include="App_Data\Account.mdf" />
+    <Content Include="App_Data\Account_log.ldf">
+      <DependentUpon>Account.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -90,11 +98,10 @@
     <Content Include="CustomerBooking.aspx" />
     <Content Include="CustomerCustomisePlan.aspx" />
     <Content Include="CustomerPlan.aspx" />
-    <Content Include="Cust_Submit_Review.aspx" />
+    <Content Include="Cust_Review.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Cust_View_Review.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1200px-Truncated_Bar_Graph.png" />
     <Content Include="Images\GardensByTheBay.jpg" />
@@ -125,7 +132,6 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="StaffEditPlan.aspx" />
     <Content Include="StaffUpdatePlan.aspx" />
-    <Content Include="StaffGuide.aspx" />
     <Content Include="StaffPlan.aspx" />
     <Content Include="StaffStats.aspx" />
     <Content Include="StyleSheets\navbarV2.css" />
@@ -187,18 +193,20 @@
     <Compile Include="CustomerPlan.aspx.designer.cs">
       <DependentUpon>CustomerPlan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cust_Submit_Review.aspx.cs">
-      <DependentUpon>Cust_Submit_Review.aspx</DependentUpon>
+    <Compile Include="Cust_Review.aspx.cs">
+      <DependentUpon>Cust_Review.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cust_Submit_Review.aspx.designer.cs">
-      <DependentUpon>Cust_Submit_Review.aspx</DependentUpon>
+    <Compile Include="Cust_Review.aspx.designer.cs">
+      <DependentUpon>Cust_Review.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\BookingDetailsDAO.cs" />
     <Compile Include="DAL\PlanDetailsDAO.cs" />
     <Compile Include="DAL\RegisterDAO.cs" />
+    <Compile Include="DAL\RegisterTourDAO.cs" />
     <Compile Include="DAL\ReviewDAO.cs" />
     <Compile Include="DAL\C_DetailsDAO.cs" />
+    <Compile Include="DAL\LoginDAO.cs" />
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -208,13 +216,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Cust_View_Review.aspx.cs">
-      <DependentUpon>Cust_View_Review.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cust_View_Review.aspx.designer.cs">
-      <DependentUpon>Cust_View_Review.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -279,13 +280,6 @@
     </Compile>
     <Compile Include="StaffEditPlan.aspx.designer.cs">
       <DependentUpon>StaffEditPlan.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="StaffGuide.aspx.cs">
-      <DependentUpon>StaffGuide.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StaffGuide.aspx.designer.cs">
-      <DependentUpon>StaffGuide.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffPlan.aspx.cs">
       <DependentUpon>StaffPlan.aspx</DependentUpon>

@@ -12,11 +12,6 @@
                 font-weight: bold;
                 text-align: center;
             }
-
-            .auto-style1 {
-                width: 1200px;
-                height: 608px;
-            }
         </style>
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -25,62 +20,49 @@
                 </div>
             </div>
         </div>
-        <img alt="" class="auto-style1" src="Images/1200px-Truncated_Bar_Graph.png" />
-        <br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="View By:"></asp:Label>
-&nbsp;
-        <asp:DropDownList ID="DropDownListVariable" runat="server" AutoPostBack="True">
+        <asp:Chart ID="Chart1" runat="server" BorderlineColor="Black" Height="500px" Width="1050px">
+            <Series>
+                <asp:Series Name="SeriesStats" ChartArea="ChartArea1">
+                </asp:Series>
+            </Series>
+            <ChartAreas>
+                <asp:ChartArea Name="ChartArea1">
+                </asp:ChartArea>
+            </ChartAreas>
+        </asp:Chart>
+        <asp:DropDownList ID="DropDownListVariable" runat="server" AutoPostBack="True" CssClass="bootstrap class form-control" OnSelectedIndexChanged="DropDownListVariable_SelectedIndexChanged">
             <asp:ListItem Selected="True">Total Plan Sales</asp:ListItem>
             <asp:ListItem>Individual Plan Sales</asp:ListItem>
-            <asp:ListItem>Number of Bookings</asp:ListItem>
-        </asp:DropDownList>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label2" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Date Range:"></asp:Label>
-&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
-            <asp:ListItem Selected="True">Monthly</asp:ListItem>
-            <asp:ListItem>Quarterly</asp:ListItem>
-            <asp:ListItem>Yearly</asp:ListItem>
-        </asp:DropDownList>
-        <br />
-        <br />
+            <asp:ListItem>Sales by Start Day</asp:ListItem>
+            <asp:ListItem>Sales by End Day</asp:ListItem>
+        </asp:DropDownList><br />
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h3 style="text-align: center">Tour Guide Statistics</h3>
+            </div>
+        </div>
         <br />
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <h3 style="text-align:center">Tour Guide Statistics</h3>
+                <asp:DataList DataSourceID="SqlDataSource1" ID="DataListGuides" runat="server" CssClass="bootstrap col-12">
+                    <ItemTemplate>
+                        <div class="card">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Name: <%# Eval("Name") %>
+                                    <br />
+                                    Email: <%# Eval("Email") %>
+                                    <br />
+                                    Rating: <%# Eval("Rating") %>/10
+                                    <br />
+                                    Date registered: <%# Eval("Date Registered") %>
+                                </li>
+                            </ul>
+                        </div>
+                    </ItemTemplate>
+                </asp:DataList>
             </div>
         </div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label3" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Sort By:"></asp:Label>
-&nbsp;<asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True">
-            <asp:ListItem Selected="True">Most Popular</asp:ListItem>
-            <asp:ListItem>Least Popular</asp:ListItem>
-            <asp:ListItem>ID</asp:ListItem>
-        </asp:DropDownList>
         <br />
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            Name: John Doe
-                            &nbsp;&nbsp;&nbsp;&nbsp;Rating: 7.2/10
-                            &nbsp;&nbsp;&nbsp;&nbsp;Date registered: 21/10/2019
-                        </li>
-                        <li class="list-group-item">
-                            Name: Mary Tan
-                            &nbsp;&nbsp;&nbsp;&nbsp;Rating: 8.5/10
-                            &nbsp;&nbsp;&nbsp;&nbsp;Date registered: 10/4/2019
-                        </li>
-                        <li class="list-group-item">
-                            Name: John Tan
-                            &nbsp;&nbsp;&nbsp;&nbsp;Rating: 6.8/10
-                            &nbsp;&nbsp;&nbsp;&nbsp;Date registered: 3/10/2019
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnStr %>" SelectCommand="SELECT [Name], [Email], [Rating], [Date Registered] FROM [TGDetails]"></asp:SqlDataSource>
     </form>
 </asp:Content>

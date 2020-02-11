@@ -18,6 +18,18 @@
         <p class="header">
             Booking History
         </p>
+        <div class="row col-12">
+            <asp:TextBox ID="TextBoxSearch" runat="server" Width="70%" CssClass="bootstrap class form-control" BackColor="#CCFFFF" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+            <asp:DropDownList ID="DropDownListParam" runat="server" Width="20%" AutoPostBack="True" BackColor="#CCFFFF" OnSelectedIndexChanged="DropDownListParam_SelectedIndexChanged">
+                <asp:ListItem Selected="True">None</asp:ListItem>
+                <asp:ListItem>Date Booked</asp:ListItem>
+                <asp:ListItem>Plan Name</asp:ListItem>
+                <asp:ListItem>Start Date</asp:ListItem>
+                <asp:ListItem>End Date</asp:ListItem>
+            </asp:DropDownList>
+            <asp:Button ID="ButtonSearch" runat="server" Text="Search" Width="10%" CssClass="btn btn-info" OnClick="ButtonSearch_Click" />
+        </div>
+        <br />
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <asp:GridView ID="GridViewBookings" runat="server" AutoGenerateColumns="False" CssClass="table table-striped" GridLines="None">
@@ -34,6 +46,8 @@
                     </Columns>
                 </asp:GridView>
             </div>
+            <asp:Label ID="LabelBookingError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
         </div>
+        <br />
     </form>
 </asp:Content>

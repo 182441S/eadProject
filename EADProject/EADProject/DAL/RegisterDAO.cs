@@ -12,51 +12,6 @@ namespace EADProject.DAL
 {
     public class RegisterDAO
     {
-        //public List<Cust> SelectAll()
-        //{
-        //    string DBConnect = ConfigurationManager.ConnectionStrings["Connstr"].ConnectionString;
-        //    SqlConnection myConn = new SqlConnection(DBConnect);
-
-        //    string sqlStmt = "Select * from Cust";
-        //    SqlDataAdapater da = new SqlDataAdapater(sqlStmt, myConn);
-
-        //    DataSet ds = new DataSet();
-
-        //    da.Fill(ds);
-
-
-        //}
-
-        //public Cust Verify(string name, string password)
-        //{
-        //    string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
-        //    SqlConnection myConn = new SqlConnection(DBConnect);
-
-        //    string sqlStmt = "Select * from Cust where name = @paraName, password = @paraPassword";
-        //    SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
-
-        //    da.SelectCommand.Parameters.AddWithValue("@paraName", name);
-        //    da.SelectCommand.Parameters.AddWithValue("@paraPassword", password);
-
-        //    DataSet ds = new DataSet();
-
-        //    da.Fill(ds);
-
-        //    Cust emp = null;
-        //    int rec_cnt = ds.Tables[0].Rows.Count;
-        //    if (rec_cnt == 1)
-        //    {
-        //        DataRow row = ds.Tables[0].Rows[0];
-        //        string Name = row["name"].ToString();
-        //        string Password = row["password"].ToString();
-        //        emp = new Cust(Name, Password);
-        //    }
-        //    else
-        //    {
-        //        emp = null;
-        //    }
-
-        //    return emp;
 
             public int Insert(string name, DateTime dob, int phone, string email, string password)
             {
@@ -82,30 +37,30 @@ namespace EADProject.DAL
 
             }
 
-            //public int Update(Cust emp)
-            //{
-            //    int result = 0;
-            //    SqlCommand sqlCmd = new SqlCommand();
+        public int Update(Cust emp)
+        {
+            int result = 0;
+            SqlCommand sqlCmd = new SqlCommand();
 
-            //    string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
-            //    SqlConnection myConn = new SqlConnection(DBConnect);
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
 
-            //    string sqlStmt = "UPDATE EMPLOYEE SET Name = @paraName, DOB = @paraDOB, Phone = @paraPhone, Email = @paraEmail, Password = @paraPassword";
-            //    sqlCmd = new SqlCommand(sqlStmt, myConn);
+            string sqlStmt = "UPDATE Cust SET Name = @paraName, DOB = @paraDOB, Phone = @paraPhone, Password = @paraPassword where email = @paraEmail";
+            sqlCmd = new SqlCommand(sqlStmt, myConn);
 
-            //    sqlCmd.Parameters.AddWithValue("@paraName", emp.Name);
-            //    sqlCmd.Parameters.AddWithValue("@paraDOB", emp.DOB);
-            //    sqlCmd.Parameters.AddWithValue("@paraPhone", emp.Phone);
-            //    sqlCmd.Parameters.AddWithValue("@paraEmail", emp.Email);
-            //    sqlCmd.Parameters.AddWithValue("@paraPassword", emp.Password);
+            sqlCmd.Parameters.AddWithValue("@paraName", emp.Name);
+            sqlCmd.Parameters.AddWithValue("@paraDOB", emp.DOB);
+            sqlCmd.Parameters.AddWithValue("@paraPhone", emp.Phone);
+            sqlCmd.Parameters.AddWithValue("@paraPassword", emp.Password);
 
-            //    myConn.Open();
-            //    result = sqlCmd.ExecuteNonQuery();
+            myConn.Open();
+            result = sqlCmd.ExecuteNonQuery();
 
-            //    myConn.Close();
+            myConn.Close();
 
-            //    return result;
-            //}
-        
+            return result;
+        }
+
     }
+
 }

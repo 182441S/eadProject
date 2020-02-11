@@ -20,9 +20,9 @@ namespace EADProject
                 }
 
                 LabelPlanName.Text = Session["Name"].ToString();
-                TextBoxLocation1Name.Text = Session["Location1"].ToString();
-                TextBoxLocation2Name.Text = Session["Location2"].ToString();
-                TextBoxLocation3Name.Text = Session["Location3"].ToString();
+                DropDownListLocFirst.SelectedValue = Session["Location1"].ToString();
+                DropDownListLocSecond.SelectedValue = Session["Location2"].ToString();
+                DropDownListLocThird.SelectedValue = Session["Location3"].ToString();
                 TextBoxPrice.Text = Session["Price"].ToString();
                 TextBoxDuration.Text = Session["Duration"].ToString();
                 TextBoxDescription.Text = Session["Description"].ToString();
@@ -31,21 +31,102 @@ namespace EADProject
 
         protected void ButtonSave_Click(object sender, EventArgs e)
         {
-            String name = LabelPlanName.Text.ToString();
-            String locationFirst = TextBoxLocation1Name.Text.ToString();
-            String locationSecond = TextBoxLocation2Name.Text.ToString();
-            String locationThird = TextBoxLocation3Name.Text.ToString();
-            int price = int.Parse(TextBoxPrice.Text);
-            int duration = int.Parse(TextBoxDuration.Text);
-            String description = TextBoxDescription.Text.ToString();
+            bool error = false;
+            
+            LabelLocationError.Visible = false;
+            LabelPriceError.Visible = false;
+            LabelDurationError.Visible = false;
+            LabelDescError.Visible = false;
 
-            PlanDetails pd = new PlanDetails();
-            int result = pd.UpdatePlanByName(name, locationFirst, locationSecond, locationThird, price, duration, description);
-
-            if (result == 1)
+            if (DropDownListLocFirst.SelectedValue == "-1" ||
+                DropDownListLocSecond.SelectedValue == "-1" ||
+                DropDownListLocThird.SelectedValue == "-1")
             {
-                Response.Redirect("StaffPlan.aspx");
+                error = true;
+
+                LabelLocationError.Text = "Location not selected!";
+                LabelLocationError.Visible = true;
             }
+            else if (DropDownListLocFirst.SelectedValue == DropDownListLocSecond.SelectedValue ||
+                DropDownListLocFirst.SelectedValue == DropDownListLocThird.SelectedValue ||
+                DropDownListLocSecond.SelectedValue == DropDownListLocThird.SelectedValue)
+            {
+                error = true;
+
+                LabelLocationError.Text = "Locations are the same!";
+                LabelLocationError.Visible = true;
+            }
+
+            if (TextBoxPrice.Text == "")
+            {
+                error = true;
+
+                LabelPriceError.Text = "Price is required!";
+                LabelPriceError.Visible = true;
+            }
+            else
+            {
+                try
+                {
+                    int.Parse(TextBoxPrice.Text);
+                }
+                catch
+                {
+                    error = true;
+
+                    LabelPriceError.Text = "Price must be a number!";
+                    LabelPriceError.Visible = true;
+                }
+            }
+
+            if (TextBoxDuration.Text == "")
+            {
+                error = true;
+
+                LabelDurationError.Text = "Duration is required!";
+                LabelDurationError.Visible = true;
+            }
+            else
+            {
+                try
+                {
+                    int.Parse(TextBoxDuration.Text);
+                }
+                catch
+                {
+                    error = true;
+
+                    LabelDurationError.Text = "Duration must be a number!";
+                    LabelDurationError.Visible = true;
+                }
+            }
+
+            if (TextBoxDescription.Text == "")
+            {
+                error = true;
+
+                LabelDescError.Text = "Description is required!";
+                LabelDescError.Visible = true;
+            }
+
+            if (!error)
+            {
+                string name = LabelPlanName.Text.ToString();
+                string locationFirst = DropDownListLocFirst.SelectedValue;
+                string locationSecond = DropDownListLocSecond.SelectedValue;
+                string locationThird = DropDownListLocThird.SelectedValue;
+                int price = int.Parse(TextBoxPrice.Text);
+                int duration = int.Parse(TextBoxDuration.Text);
+                string description = TextBoxDescription.Text.ToString();
+
+                PlanDetails pd = new PlanDetails();
+                int result = pd.UpdatePlanByName(name, locationFirst, locationSecond, locationThird, price, duration, description);
+
+                if (result == 1)
+                {
+                    Response.Redirect("StaffPlan.aspx");
+                }
+            }            
         }
 
         protected void ButtonCancel_Click(object sender, EventArgs e)

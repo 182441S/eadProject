@@ -109,5 +109,29 @@ namespace EADProject.DAL
 
             return result;
         }
+
+        public List<String> GetPlanNames()
+        {
+            List<string> list = new List<string>();
+
+            string connStr = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(connStr);
+
+            string sqlStmt = @"SELECT Name FROM PlanDetails";
+
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+            myConn.Open();
+
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                list.Add(dr["Name"].ToString());
+            }
+
+            myConn.Close();
+
+            return list;
+        }
     }
 }

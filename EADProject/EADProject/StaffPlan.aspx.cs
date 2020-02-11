@@ -13,17 +13,18 @@ namespace EADProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["Name"] = "";
+            Session["Location1"] = "";
+            Session["Location2"] = "";
+            Session["Location3"] = "";
+            Session["Price"] = "";
+            Session["Duration"] = "";
+            Session["Description"] = "";
         }
 
         protected void btnNewPlan_ServerClick(object sender, EventArgs e)
         {
             Response.Redirect("StaffEditPlan.aspx");
-        }
-
-        protected void deletePlan_ServerClick(object sender, EventArgs e)
-        {
-
         }
 
         protected void editPlan_ServerClick(object sender, EventArgs e)

@@ -19,7 +19,7 @@
             .auto-style2 {
                 width: 250px;
             }
-            </style>
+        </style>
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="card-header" id="header">
@@ -37,10 +37,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2">
@@ -53,7 +51,7 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
-                </tr>
+            </tr>
             <tr>
                 <td class="auto-style2">
                     <asp:Label ID="Label3" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Choose Start Date:"></asp:Label>
@@ -72,47 +70,45 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
-                </tr>
+            </tr>
             <tr>
                 <td class="auto-style2">
                     <asp:Label ID="Label12" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Start Date:"></asp:Label>
                 </td>
                 <td>
-                    <asp:Label ID="LabelStartDate" runat="server" Font-Bold="False" Font-Names="Gadugi" Font-Size="X-Large" Text="Please select a start date." ForeColor="Black"></asp:Label> 
+                    <asp:Label ID="LabelStartDate" runat="server" Font-Bold="False" Font-Names="Gadugi" Font-Size="X-Large" Text="Please select a start date." ForeColor="Black"></asp:Label>
                 </td>
-                </tr>
+            </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
-                </tr>
+            </tr>
             <tr>
                 <td class="auto-style2">
                     <asp:Label ID="Label4" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="End Date:"></asp:Label>
                 </td>
                 <td>
-                    <asp:Label ID="LabelEndDate" runat="server" Font-Bold="False" Font-Names="Gadugi" Font-Size="X-Large" Text="Please select a start date." ForeColor="Black"></asp:Label> 
+                    <asp:Label ID="LabelEndDate" runat="server" Font-Bold="False" Font-Names="Gadugi" Font-Size="X-Large" Text="Please select a start date." ForeColor="Black"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2">
                     <asp:Label ID="Label13" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Total Price:"></asp:Label>
                 </td>
                 <td>
-                    <asp:Label ID="LabelPrice" runat="server" Font-Bold="False" Font-Names="Gadugi" Font-Size="X-Large" ForeColor="Black"></asp:Label> 
+                    <asp:Label ID="LabelPrice" runat="server" Font-Bold="False" Font-Names="Gadugi" Font-Size="X-Large" ForeColor="Black"></asp:Label>
                 </td>
             </tr>
         </table>
         <br />
-        <br />  
+        <br />
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <h3 style="text-align:center">Customise Schedule</h3>
+                <h3 style="text-align: center">Customise Schedule</h3>
             </div>
         </div>
         <br />
@@ -122,7 +118,7 @@
                     <asp:Label ID="Label6" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="First Location:"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownListFirst" runat="server" Width="300px">
+                    <asp:DropDownList ID="DropDownListFirst" runat="server" Width="300px" CssClass="bootstrap class form-control">
                         <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
                     </asp:DropDownList>
                 </td>
@@ -132,7 +128,7 @@
                     <asp:Label ID="Label7" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Second Location:"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownListSecond" runat="server" Width="300px">
+                    <asp:DropDownList ID="DropDownListSecond" runat="server" Width="300px" CssClass="bootstrap class form-control">
                         <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
                     </asp:DropDownList>
                 </td>
@@ -142,7 +138,7 @@
                     <asp:Label ID="Label8" runat="server" Font-Names="Gadugi" Font-Size="X-Large" Text="Third Location:"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownListThird" runat="server" Width="300px">
+                    <asp:DropDownList ID="DropDownListThird" runat="server" Width="300px" CssClass="bootstrap class form-control">
                         <asp:ListItem Selected="True" Value="-1">--Select--</asp:ListItem>
                     </asp:DropDownList>
                 </td>
@@ -150,26 +146,25 @@
         </table>
         <table class="auto-style1">
             <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td>
+                    <asp:Label ID="LabelLocationError" runat="server" Font-Names="Gadugi" Font-Size="Medium" Font-Bold="False" ForeColor="#FF3300" Visible="False"></asp:Label>
+                </td>
             </tr>
             <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2">
                     <asp:Button ID="ButtonContinue" runat="server" CssClass="btn btn-info" Text="Continue" OnClick="ButtonContinue_Click" />
-&nbsp;&nbsp;
-                    <asp:Button ID="ButtonCancel" runat="server" OnClick="ButtonCancel_Click" CssClass="btn btn-danger" Text="Cancel" />
+                    &nbsp;&nbsp;
+                    <asp:Button ID="ButtonCancel" runat="server" OnClick="ButtonCancel_Click" CssClass="btn btn-danger" Text="Cancel" data-toggle="modal" data-target="#travelModal" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
         </table>

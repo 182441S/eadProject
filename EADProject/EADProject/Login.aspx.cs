@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EADProject.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,5 +19,11 @@ namespace EADProject
         {
 
         }
+
+        protected void LoginBtn_Click(object sender, EventArgs e)
+        {
+            Cust d = new Cust();
+            //emp = d.VerifyByID(EmailID.Text, Password.Text);
+        }
     }
-}
+} 
