@@ -72,6 +72,15 @@
                     <a class="dropdown-item" href="BookingHistory.aspx">BHistory</a>
                 </div>
             </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarJobhistory" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Job Log
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarSimulation">
+                    <a class="dropdown-item" href="JobListing.aspx">Job History</a>
+                    
+                </div>
+            </li>
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
