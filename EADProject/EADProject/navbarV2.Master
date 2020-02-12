@@ -63,7 +63,7 @@
             </li>
              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarSimulation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Simulation
+                    Admins
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarSimulation">
                     <a class="dropdown-item" href="PaymentSimulation.aspx">Payment Simulation</a>
