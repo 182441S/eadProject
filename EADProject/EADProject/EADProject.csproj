@@ -72,14 +72,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EADP_DB.mdf" />
-    <Content Include="App_Data\EADP_DB_log.ldf">
-      <DependentUpon>EADP_DB.mdf</DependentUpon>
+    <Content Include="App_Data\tourDB.mdf" />
+    <Content Include="App_Data\tourDB_log.ldf">
+      <DependentUpon>tourDB.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\TourismDB.mdf" />
-    <Content Include="App_Data\TourismDB_log.ldf">
-      <DependentUpon>TourismDB.mdf</DependentUpon>
-    </Content>
+    <Content Include="Bonus.aspx" />
     <Content Include="BookingHistory.aspx" />
     <Content Include="Images\Femaleavatar.png" />
     <Content Include="Image\JackJonesAvatar.png" />
@@ -89,7 +86,6 @@
     <Content Include="ViewTourguideDetails.aspx" />
     <Content Include="App_Data\Account.mdf" />
     <Content Include="App_Data\Account_log.ldf">
-      <DependentUpon>Account.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -143,6 +139,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\TourGuide.cs" />
+    <Compile Include="BLL\Jobhistory.cs" />
+    <Compile Include="Bonus.aspx.cs">
+      <DependentUpon>Bonus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bonus.aspx.designer.cs">
+      <DependentUpon>Bonus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BookingHistory.aspx.cs">
       <DependentUpon>BookingHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

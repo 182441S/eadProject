@@ -1,8 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarV2.Master" AutoEventWireup="true" CodeBehind="assignBonus.aspx.cs" Inherits="EADProject.assignBonus" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarV2.Master" AutoEventWireup="true" CodeBehind="Bonus.aspx.cs" Inherits="EADProject.Bonus" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-    <script src="Scripts/paymentsim.js"></script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -15,7 +13,7 @@
 
         <div class="Details">
             <asp:Label ID="namestringlbl" runat="server" CssClass="label" Text="Tour Guide Name:"></asp:Label>
-                        &nbsp;<asp:Label ID="tgnamelbl" CssClass="details" runat="server" ></asp:Label>
+                        &nbsp;<asp:Label ID="namelbl" CssClass="details" runat="server" ></asp:Label>
                         <br />
                         <br />
                         <asp:Label ID="nricstringlabel" runat="server" CssClass="label" Text="NRIC:"></asp:Label>

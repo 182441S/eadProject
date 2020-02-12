@@ -38,7 +38,7 @@ namespace EADProject
             Session["EMAIL"]= email;
             Session["SALARY"]= salary;
 
-            Response.Redirect("assignBonus.aspx");
+            Response.Redirect("Bonus.aspx");
 
             int re = ist.Update(Convert.ToInt32("9787978"), nric);
 

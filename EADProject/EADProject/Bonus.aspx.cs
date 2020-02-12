@@ -5,12 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace EADProject
 {
-    public partial class assignBonus : System.Web.UI.Page
+    public partial class Bonus : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,16 +19,17 @@ namespace EADProject
                 {
                     Response.Redirect("PaymentSimulation.aspx");
                 }
-                else { 
-                tgnamelbl.Text = Session["NAME"].ToString();
-                nriclbl.Text = Session["NRIC"].ToString();
-                phonelbl.Text = Session["PHONE"].ToString();
-                emaillbl.Text = Session["EMAIL"].ToString();
-                salarytb.Text = Session["SALARY"].ToString();
+                else
+                {
+                    namelbl.Text = Session["NAME"].ToString();
+                    nriclbl.Text = Session["NRIC"].ToString();
+                    phonelbl.Text = Session["PHONE"].ToString();
+                    emaillbl.Text = Session["EMAIL"].ToString();
+                    salarytb.Text = Session["SALARY"].ToString();
                 }
             }
-        }
 
+        }
         protected void cancel_ServerClick(object sender, EventArgs e)
         {
             Response.Redirect("PaymentSimulation.aspx");
@@ -62,7 +62,7 @@ namespace EADProject
             }
 
 
-           
+
 
 
 
@@ -72,7 +72,7 @@ namespace EADProject
 
             if (bonusamttb.Text != "")
             {
-                int result = ist.InsertTest(Convert.ToInt32(bonusamttb.Text), Commentstb.Text,nric);
+                int result = ist.InsertTest(Convert.ToInt32(bonusamttb.Text), Commentstb.Text, nric);
             }
 
             Response.Redirect("PaymentSimulation.aspx");

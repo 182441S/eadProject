@@ -10,7 +10,7 @@
 namespace EADProject {
     
     
-    public partial class assignBonus {
+    public partial class Bonus {
         
         /// <summary>
         /// form2 control.
@@ -31,13 +31,13 @@ namespace EADProject {
         protected global::System.Web.UI.WebControls.Label namestringlbl;
         
         /// <summary>
-        /// tgnamelbl control.
+        /// namelbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label tgnamelbl;
+        protected global::System.Web.UI.WebControls.Label namelbl;
         
         /// <summary>
         /// nricstringlabel control.
